@@ -20,6 +20,9 @@
 		98FB3B4E29C360F1003DAFD7 /* Task_003_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */; };
 		98FB3B5029C3610A003DAFD7 /* Task_003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4F29C3610A003DAFD7 /* Task_003.swift */; };
 		98FB3B5129C3611E003DAFD7 /* Task_003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4F29C3610A003DAFD7 /* Task_003.swift */; };
+		98FB3B5429C38DF0003DAFD7 /* Task_004.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5329C38DF0003DAFD7 /* Task_004.swift */; };
+		98FB3B5729C38E61003DAFD7 /* Task_004_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */; };
+		98FB3B5829C38E6E003DAFD7 /* Task_004.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5329C38DF0003DAFD7 /* Task_004.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,8 @@
 		98FB3B4929C2534F003DAFD7 /* Task_002_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_002_Tests.swift; sourceTree = "<group>"; };
 		98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_003_Tests.swift; sourceTree = "<group>"; };
 		98FB3B4F29C3610A003DAFD7 /* Task_003.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_003.swift; sourceTree = "<group>"; };
+		98FB3B5329C38DF0003DAFD7 /* Task_004.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_004.swift; sourceTree = "<group>"; };
+		98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_004_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +102,7 @@
 		98FB3B2629C2356B003DAFD7 /* LeetCodeTasks.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				98FB3B5229C38DDB003DAFD7 /* HardTasks */,
 				98FB3B4629C252A1003DAFD7 /* Structures */,
 				98FB3B4229C25220003DAFD7 /* MediumTasks */,
 				98FB3B3929C2371F003DAFD7 /* EasyTasks */,
@@ -108,6 +114,7 @@
 		98FB3B3329C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests */ = {
 			isa = PBXGroup;
 			children = (
+				98FB3B5529C38DF6003DAFD7 /* HardTasks.Tests */,
 				98FB3B4329C2522F003DAFD7 /* MediumTasks.Tests */,
 				98FB3B3C29C23866003DAFD7 /* EasyTasks.Tests */,
 				98FB3B3429C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift */,
@@ -155,6 +162,22 @@
 				98FB3B4729C252B6003DAFD7 /* ListNode.swift */,
 			);
 			path = Structures;
+			sourceTree = "<group>";
+		};
+		98FB3B5229C38DDB003DAFD7 /* HardTasks */ = {
+			isa = PBXGroup;
+			children = (
+				98FB3B5329C38DF0003DAFD7 /* Task_004.swift */,
+			);
+			path = HardTasks;
+			sourceTree = "<group>";
+		};
+		98FB3B5529C38DF6003DAFD7 /* HardTasks.Tests */ = {
+			isa = PBXGroup;
+			children = (
+				98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */,
+			);
+			path = HardTasks.Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +275,7 @@
 				98FB3B5029C3610A003DAFD7 /* Task_003.swift in Sources */,
 				98FB3B2829C2356B003DAFD7 /* main.swift in Sources */,
 				98FB3B4829C252B6003DAFD7 /* ListNode.swift in Sources */,
+				98FB3B5429C38DF0003DAFD7 /* Task_004.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98FB3B5829C38E6E003DAFD7 /* Task_004.swift in Sources */,
 				98FB3B5129C3611E003DAFD7 /* Task_003.swift in Sources */,
 				98FB3B4C29C25666003DAFD7 /* Task_002.swift in Sources */,
 				98FB3B4E29C360F1003DAFD7 /* Task_003_Tests.swift in Sources */,
@@ -267,6 +292,7 @@
 				98FB3B4A29C2534F003DAFD7 /* Task_002_Tests.swift in Sources */,
 				98FB3B3E29C238A0003DAFD7 /* Task_001_Tests.swift in Sources */,
 				98FB3B3529C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift in Sources */,
+				98FB3B5729C38E61003DAFD7 /* Task_004_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
