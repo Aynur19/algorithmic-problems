@@ -23,7 +23,7 @@ final class Task_004_Tests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_lengthOfLongestSubstring() throws {
+    func test_findMedianSortedArrays() throws {
         XCTAssertEqual(task.findMedianSortedArrays([1, 3], [2]), 2.0)
         XCTAssertEqual(task.findMedianSortedArrays([1, 2], [3, 4]), 2.5)
         XCTAssertEqual(task.findMedianSortedArrays([], [1]), 1.0)
