@@ -23,9 +23,9 @@ final class Task_007_Tests: XCTestCase {
     }
     
     func test_reverse() throws {
-//        XCTAssertEqual(task.reverse(123), 321)
-//        XCTAssertEqual(task.reverse(-123), -321)
-//        XCTAssertEqual(task.reverse(120), 21)
+        XCTAssertEqual(task.reverse(123), 321)
+        XCTAssertEqual(task.reverse(-123), -321)
+        XCTAssertEqual(task.reverse(120), 21)
         XCTAssertEqual(task.reverse(1534236469), 0)
     }
 }
