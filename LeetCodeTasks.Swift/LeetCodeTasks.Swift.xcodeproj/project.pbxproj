@@ -26,6 +26,9 @@
 		98FB3B5A29C3AC6B003DAFD7 /* Task_005_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */; };
 		98FB3B5C29C3AC8A003DAFD7 /* Task_005.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */; };
 		98FB3B5D29C3AD09003DAFD7 /* Task_005.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */; };
+		98FB3B5F29C4B86D003DAFD7 /* Task_006_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */; };
+		98FB3B6129C4B8B0003DAFD7 /* Task_006.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */; };
+		98FB3B6229C4BDD3003DAFD7 /* Task_006.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_004_Tests.swift; sourceTree = "<group>"; };
 		98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_005_Tests.swift; sourceTree = "<group>"; };
 		98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_005.swift; sourceTree = "<group>"; };
+		98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_006_Tests.swift; sourceTree = "<group>"; };
+		98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_006.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,7 @@
 				98FB3B4429C2524F003DAFD7 /* Task_002.swift */,
 				98FB3B4F29C3610A003DAFD7 /* Task_003.swift */,
 				98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */,
+				98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */,
 			);
 			path = MediumTasks;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 				98FB3B4929C2534F003DAFD7 /* Task_002_Tests.swift */,
 				98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */,
 				98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */,
+				98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */,
 			);
 			path = MediumTasks.Tests;
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98FB3B3B29C2377C003DAFD7 /* Task_001.swift in Sources */,
+				98FB3B6129C4B8B0003DAFD7 /* Task_006.swift in Sources */,
 				98FB3B4529C2524F003DAFD7 /* Task_002.swift in Sources */,
 				98FB3B5029C3610A003DAFD7 /* Task_003.swift in Sources */,
 				98FB3B2829C2356B003DAFD7 /* main.swift in Sources */,
@@ -291,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98FB3B6229C4BDD3003DAFD7 /* Task_006.swift in Sources */,
 				98FB3B5D29C3AD09003DAFD7 /* Task_005.swift in Sources */,
+				98FB3B5F29C4B86D003DAFD7 /* Task_006_Tests.swift in Sources */,
 				98FB3B5A29C3AC6B003DAFD7 /* Task_005_Tests.swift in Sources */,
 				98FB3B5829C38E6E003DAFD7 /* Task_004.swift in Sources */,
 				98FB3B5129C3611E003DAFD7 /* Task_003.swift in Sources */,

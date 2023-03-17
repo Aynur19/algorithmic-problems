@@ -22,7 +22,7 @@ final class Task_005_Tests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_findMedianSortedArrays() throws {
+    func test_longestPalindrome() throws {
         XCTAssertTrue(["a", "c"].firstIndex(of: task.longestPalindrome("ac")) != nil)
         XCTAssertTrue(["bab", "aba"].firstIndex(of: task.longestPalindrome("babad")) != nil)
         XCTAssertEqual(task.longestPalindrome("cbbd"), "bb")
