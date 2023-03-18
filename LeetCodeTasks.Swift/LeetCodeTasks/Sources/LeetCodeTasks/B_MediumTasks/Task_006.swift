@@ -16,13 +16,13 @@
 ///
 /// And then read line by line: "PAHNAPLSIIGYIR"
 ///
-/// Write the code that will take a string and make this conversion given a number of rows:
-//  string convert(string s, int numRows);
+/// Write the code that will take a string and make this conversion given a number of rows: string convert(string s, int numRows);
 ///
 /// Constraints:
 /// 1) 1 <= s.length <= 1000
 /// 2) s consists of English letters (lower-case and upper-case), ',' and '.'.
 /// 3) 1 <= numRows <= 1000
+
 
 import Foundation
 

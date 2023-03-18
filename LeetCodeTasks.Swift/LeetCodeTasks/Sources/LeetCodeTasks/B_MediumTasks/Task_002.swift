@@ -6,19 +6,18 @@
 //
 
 /// 1. Add Two Numbers:
-/// You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+/// You are given two non-empty linked lists representing two non-negative integers.
+/// The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 ///
 /// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
 
 import Foundation
 
 class Task_002 {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        if l1 == nil {
-            return l2
-        } else if l2 == nil {
-            return l1
-        }
+        if l1 == nil { return l2 }
+        else if l2 == nil { return l1 }
         
         let result = l1
         result!.val += l2!.val

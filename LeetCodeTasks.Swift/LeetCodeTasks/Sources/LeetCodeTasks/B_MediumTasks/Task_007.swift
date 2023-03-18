@@ -15,6 +15,7 @@
 /// Constraints:
 /// 1) -231 <= x <= 231 - 1
 
+
 import Foundation
 
 class Task_007 {

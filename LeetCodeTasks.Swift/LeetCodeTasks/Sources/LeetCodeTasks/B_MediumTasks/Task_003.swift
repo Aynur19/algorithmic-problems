@@ -13,6 +13,7 @@
 /// 1) 0 <= s.length <= 5 * 104
 /// 2) 's' consists of English letters, digits, symbols and spaces.
 
+
 import Foundation
 
 class Task_003 {
@@ -37,9 +38,7 @@ class Task_003 {
             count += 1
             charsDict[chars[i]] = i
             
-            if count >= alphabet.count {
-                return count
-            }
+            if count >= alphabet.count { return count }
         }
         
         return count

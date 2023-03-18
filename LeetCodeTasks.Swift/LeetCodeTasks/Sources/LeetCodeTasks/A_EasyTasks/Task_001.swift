@@ -1,8 +1,8 @@
 //
-//  Task_001.swift
-//  LeetCodeTasks.Swift
+//  File.swift
+//  
 //
-//  Created by Aynur Nasybullin on 15.03.2023.
+//  Created by Aynur Nasybullin on 18.03.2023.
 //
 
 /// 1. Two Sum:
@@ -12,8 +12,8 @@
 ///
 /// You can return the answer in any order.
 
-import Foundation
 
+import Foundation
 
 class Task_001 {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {

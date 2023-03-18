@@ -14,8 +14,6 @@
 /// 2) s consist of only digits and English letters.
 
 
-/// mamamiadqwewqda
-/// adqwewqdaimamam
 import Foundation
 
 class Task_005 {
@@ -87,14 +85,10 @@ class Task_005 {
             var i = index - 2, j = index + 1
             while i >= 0 && j < chars.count {
                 if chars[i] == chars[j] {
-                    if chars[i] != char {
-                        isOneSymbol = false
-                    }
+                    if chars[i] != char { isOneSymbol = false }
                     i -= 1
                     j += 1
-                } else {
-                    break
-                }
+                } else { break }
             }
             
             if !isOneSymbol {

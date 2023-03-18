@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import LeetCodeTasks_Swift
+@testable import LeetCodeTasks
 
 final class Task_002_Tests: XCTestCase {
     var task: Task_002!

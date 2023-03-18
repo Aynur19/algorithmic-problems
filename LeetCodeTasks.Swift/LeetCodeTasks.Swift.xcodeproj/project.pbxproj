@@ -6,106 +6,10 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		98FB3B2829C2356B003DAFD7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B2729C2356B003DAFD7 /* main.swift */; };
-		98FB3B3529C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B3429C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift */; };
-		98FB3B3B29C2377C003DAFD7 /* Task_001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B3A29C2377C003DAFD7 /* Task_001.swift */; };
-		98FB3B3E29C238A0003DAFD7 /* Task_001_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B3D29C238A0003DAFD7 /* Task_001_Tests.swift */; };
-		98FB3B4129C23EC1003DAFD7 /* Task_001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B3A29C2377C003DAFD7 /* Task_001.swift */; };
-		98FB3B4529C2524F003DAFD7 /* Task_002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4429C2524F003DAFD7 /* Task_002.swift */; };
-		98FB3B4829C252B6003DAFD7 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4729C252B6003DAFD7 /* ListNode.swift */; };
-		98FB3B4A29C2534F003DAFD7 /* Task_002_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4929C2534F003DAFD7 /* Task_002_Tests.swift */; };
-		98FB3B4B29C2565C003DAFD7 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4729C252B6003DAFD7 /* ListNode.swift */; };
-		98FB3B4C29C25666003DAFD7 /* Task_002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4429C2524F003DAFD7 /* Task_002.swift */; };
-		98FB3B4E29C360F1003DAFD7 /* Task_003_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */; };
-		98FB3B5029C3610A003DAFD7 /* Task_003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4F29C3610A003DAFD7 /* Task_003.swift */; };
-		98FB3B5129C3611E003DAFD7 /* Task_003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B4F29C3610A003DAFD7 /* Task_003.swift */; };
-		98FB3B5429C38DF0003DAFD7 /* Task_004.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5329C38DF0003DAFD7 /* Task_004.swift */; };
-		98FB3B5729C38E61003DAFD7 /* Task_004_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */; };
-		98FB3B5829C38E6E003DAFD7 /* Task_004.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5329C38DF0003DAFD7 /* Task_004.swift */; };
-		98FB3B5A29C3AC6B003DAFD7 /* Task_005_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */; };
-		98FB3B5C29C3AC8A003DAFD7 /* Task_005.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */; };
-		98FB3B5D29C3AD09003DAFD7 /* Task_005.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */; };
-		98FB3B5F29C4B86D003DAFD7 /* Task_006_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */; };
-		98FB3B6129C4B8B0003DAFD7 /* Task_006.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */; };
-		98FB3B6229C4BDD3003DAFD7 /* Task_006.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */; };
-		98FB3B6429C4D69B003DAFD7 /* Task_007.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6329C4D69B003DAFD7 /* Task_007.swift */; };
-		98FB3B6629C4D6B1003DAFD7 /* Task_007_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6529C4D6B1003DAFD7 /* Task_007_Tests.swift */; };
-		98FB3B6729C4D6E0003DAFD7 /* Task_007.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6329C4D69B003DAFD7 /* Task_007.swift */; };
-		98FB3B6929C50300003DAFD7 /* Task_008.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6829C50300003DAFD7 /* Task_008.swift */; };
-		98FB3B6B29C50409003DAFD7 /* Task_008_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6A29C50409003DAFD7 /* Task_008_Tests.swift */; };
-		98FB3B6C29C5043C003DAFD7 /* Task_008.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB3B6829C50300003DAFD7 /* Task_008.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		98FB3B3F29C23A6E003DAFD7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98FB3B1C29C2356B003DAFD7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98FB3B2329C2356B003DAFD7;
-			remoteInfo = LeetCodeTasks.Swift;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		98FB3B2229C2356B003DAFD7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		98FB3B2429C2356B003DAFD7 /* LeetCodeTasks.Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeTasks.Swift; sourceTree = BUILT_PRODUCTS_DIR; };
-		98FB3B2729C2356B003DAFD7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		98FB3B3229C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCodeTasks.Swift.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98FB3B3429C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeTasks_Swift_Tests.swift; sourceTree = "<group>"; };
-		98FB3B3A29C2377C003DAFD7 /* Task_001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_001.swift; sourceTree = "<group>"; };
-		98FB3B3D29C238A0003DAFD7 /* Task_001_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_001_Tests.swift; sourceTree = "<group>"; };
-		98FB3B4429C2524F003DAFD7 /* Task_002.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_002.swift; sourceTree = "<group>"; };
-		98FB3B4729C252B6003DAFD7 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
-		98FB3B4929C2534F003DAFD7 /* Task_002_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_002_Tests.swift; sourceTree = "<group>"; };
-		98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_003_Tests.swift; sourceTree = "<group>"; };
-		98FB3B4F29C3610A003DAFD7 /* Task_003.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_003.swift; sourceTree = "<group>"; };
-		98FB3B5329C38DF0003DAFD7 /* Task_004.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_004.swift; sourceTree = "<group>"; };
-		98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_004_Tests.swift; sourceTree = "<group>"; };
-		98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_005_Tests.swift; sourceTree = "<group>"; };
-		98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_005.swift; sourceTree = "<group>"; };
-		98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_006_Tests.swift; sourceTree = "<group>"; };
-		98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_006.swift; sourceTree = "<group>"; };
-		98FB3B6329C4D69B003DAFD7 /* Task_007.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_007.swift; sourceTree = "<group>"; };
-		98FB3B6529C4D6B1003DAFD7 /* Task_007_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_007_Tests.swift; sourceTree = "<group>"; };
-		98FB3B6829C50300003DAFD7 /* Task_008.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_008.swift; sourceTree = "<group>"; };
-		98FB3B6A29C50409003DAFD7 /* Task_008_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_008_Tests.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		98FB3B2129C2356B003DAFD7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98FB3B2F29C236B8003DAFD7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		98FB3B1B29C2356B003DAFD7 = {
 			isa = PBXGroup;
 			children = (
-				98FB3B2629C2356B003DAFD7 /* LeetCodeTasks.Swift */,
-				98FB3B3329C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests */,
 				98FB3B2529C2356B003DAFD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,140 +17,11 @@
 		98FB3B2529C2356B003DAFD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98FB3B2429C2356B003DAFD7 /* LeetCodeTasks.Swift */,
-				98FB3B3229C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98FB3B2629C2356B003DAFD7 /* LeetCodeTasks.Swift */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B4629C252A1003DAFD7 /* Structures */,
-				98FB3B5229C38DDB003DAFD7 /* HardTasks */,
-				98FB3B4229C25220003DAFD7 /* MediumTasks */,
-				98FB3B3929C2371F003DAFD7 /* EasyTasks */,
-				98FB3B2729C2356B003DAFD7 /* main.swift */,
-			);
-			path = LeetCodeTasks.Swift;
-			sourceTree = "<group>";
-		};
-		98FB3B3329C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B5529C38DF6003DAFD7 /* HardTasks.Tests */,
-				98FB3B4329C2522F003DAFD7 /* MediumTasks.Tests */,
-				98FB3B3C29C23866003DAFD7 /* EasyTasks.Tests */,
-				98FB3B3429C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift */,
-			);
-			path = LeetCodeTasks.Swift.Tests;
-			sourceTree = "<group>";
-		};
-		98FB3B3929C2371F003DAFD7 /* EasyTasks */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B3A29C2377C003DAFD7 /* Task_001.swift */,
-			);
-			path = EasyTasks;
-			sourceTree = "<group>";
-		};
-		98FB3B3C29C23866003DAFD7 /* EasyTasks.Tests */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B3D29C238A0003DAFD7 /* Task_001_Tests.swift */,
-			);
-			path = EasyTasks.Tests;
-			sourceTree = "<group>";
-		};
-		98FB3B4229C25220003DAFD7 /* MediumTasks */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B4429C2524F003DAFD7 /* Task_002.swift */,
-				98FB3B4F29C3610A003DAFD7 /* Task_003.swift */,
-				98FB3B5B29C3AC8A003DAFD7 /* Task_005.swift */,
-				98FB3B6029C4B8B0003DAFD7 /* Task_006.swift */,
-				98FB3B6329C4D69B003DAFD7 /* Task_007.swift */,
-				98FB3B6829C50300003DAFD7 /* Task_008.swift */,
-			);
-			path = MediumTasks;
-			sourceTree = "<group>";
-		};
-		98FB3B4329C2522F003DAFD7 /* MediumTasks.Tests */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B4929C2534F003DAFD7 /* Task_002_Tests.swift */,
-				98FB3B4D29C360F1003DAFD7 /* Task_003_Tests.swift */,
-				98FB3B5929C3AC6B003DAFD7 /* Task_005_Tests.swift */,
-				98FB3B5E29C4B86D003DAFD7 /* Task_006_Tests.swift */,
-				98FB3B6529C4D6B1003DAFD7 /* Task_007_Tests.swift */,
-				98FB3B6A29C50409003DAFD7 /* Task_008_Tests.swift */,
-			);
-			path = MediumTasks.Tests;
-			sourceTree = "<group>";
-		};
-		98FB3B4629C252A1003DAFD7 /* Structures */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B4729C252B6003DAFD7 /* ListNode.swift */,
-			);
-			path = Structures;
-			sourceTree = "<group>";
-		};
-		98FB3B5229C38DDB003DAFD7 /* HardTasks */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B5329C38DF0003DAFD7 /* Task_004.swift */,
-			);
-			path = HardTasks;
-			sourceTree = "<group>";
-		};
-		98FB3B5529C38DF6003DAFD7 /* HardTasks.Tests */ = {
-			isa = PBXGroup;
-			children = (
-				98FB3B5629C38E61003DAFD7 /* Task_004_Tests.swift */,
-			);
-			path = HardTasks.Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		98FB3B2329C2356B003DAFD7 /* LeetCodeTasks.Swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98FB3B2B29C2356B003DAFD7 /* Build configuration list for PBXNativeTarget "LeetCodeTasks.Swift" */;
-			buildPhases = (
-				98FB3B2029C2356B003DAFD7 /* Sources */,
-				98FB3B2129C2356B003DAFD7 /* Frameworks */,
-				98FB3B2229C2356B003DAFD7 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LeetCodeTasks.Swift;
-			productName = LeetCodeTasks.Swift;
-			productReference = 98FB3B2429C2356B003DAFD7 /* LeetCodeTasks.Swift */;
-			productType = "com.apple.product-type.tool";
-		};
-		98FB3B3129C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98FB3B3629C236B8003DAFD7 /* Build configuration list for PBXNativeTarget "LeetCodeTasks.Swift.Tests" */;
-			buildPhases = (
-				98FB3B2E29C236B8003DAFD7 /* Sources */,
-				98FB3B2F29C236B8003DAFD7 /* Frameworks */,
-				98FB3B3029C236B8003DAFD7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				98FB3B4029C23A6E003DAFD7 /* PBXTargetDependency */,
-			);
-			name = LeetCodeTasks.Swift.Tests;
-			productName = LeetCodeTasks.Swift.Tests;
-			productReference = 98FB3B3229C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		98FB3B1C29C2356B003DAFD7 /* Project object */ = {
@@ -255,14 +30,6 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
-				TargetAttributes = {
-					98FB3B2329C2356B003DAFD7 = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					98FB3B3129C236B8003DAFD7 = {
-						CreatedOnToolsVersion = 14.2;
-					};
-				};
 			};
 			buildConfigurationList = 98FB3B1F29C2356B003DAFD7 /* Build configuration list for PBXProject "LeetCodeTasks.Swift" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -277,74 +44,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98FB3B2329C2356B003DAFD7 /* LeetCodeTasks.Swift */,
-				98FB3B3129C236B8003DAFD7 /* LeetCodeTasks.Swift.Tests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		98FB3B3029C236B8003DAFD7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		98FB3B2029C2356B003DAFD7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98FB3B3B29C2377C003DAFD7 /* Task_001.swift in Sources */,
-				98FB3B6129C4B8B0003DAFD7 /* Task_006.swift in Sources */,
-				98FB3B6429C4D69B003DAFD7 /* Task_007.swift in Sources */,
-				98FB3B4529C2524F003DAFD7 /* Task_002.swift in Sources */,
-				98FB3B5029C3610A003DAFD7 /* Task_003.swift in Sources */,
-				98FB3B2829C2356B003DAFD7 /* main.swift in Sources */,
-				98FB3B4829C252B6003DAFD7 /* ListNode.swift in Sources */,
-				98FB3B6929C50300003DAFD7 /* Task_008.swift in Sources */,
-				98FB3B5C29C3AC8A003DAFD7 /* Task_005.swift in Sources */,
-				98FB3B5429C38DF0003DAFD7 /* Task_004.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98FB3B2E29C236B8003DAFD7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98FB3B6C29C5043C003DAFD7 /* Task_008.swift in Sources */,
-				98FB3B6729C4D6E0003DAFD7 /* Task_007.swift in Sources */,
-				98FB3B6229C4BDD3003DAFD7 /* Task_006.swift in Sources */,
-				98FB3B5D29C3AD09003DAFD7 /* Task_005.swift in Sources */,
-				98FB3B5F29C4B86D003DAFD7 /* Task_006_Tests.swift in Sources */,
-				98FB3B6629C4D6B1003DAFD7 /* Task_007_Tests.swift in Sources */,
-				98FB3B5A29C3AC6B003DAFD7 /* Task_005_Tests.swift in Sources */,
-				98FB3B5829C38E6E003DAFD7 /* Task_004.swift in Sources */,
-				98FB3B6B29C50409003DAFD7 /* Task_008_Tests.swift in Sources */,
-				98FB3B5129C3611E003DAFD7 /* Task_003.swift in Sources */,
-				98FB3B4C29C25666003DAFD7 /* Task_002.swift in Sources */,
-				98FB3B4E29C360F1003DAFD7 /* Task_003_Tests.swift in Sources */,
-				98FB3B4B29C2565C003DAFD7 /* ListNode.swift in Sources */,
-				98FB3B4129C23EC1003DAFD7 /* Task_001.swift in Sources */,
-				98FB3B4A29C2534F003DAFD7 /* Task_002_Tests.swift in Sources */,
-				98FB3B3E29C238A0003DAFD7 /* Task_001_Tests.swift in Sources */,
-				98FB3B3529C236B8003DAFD7 /* LeetCodeTasks_Swift_Tests.swift in Sources */,
-				98FB3B5729C38E61003DAFD7 /* Task_004_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		98FB3B4029C23A6E003DAFD7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98FB3B2329C2356B003DAFD7 /* LeetCodeTasks.Swift */;
-			targetProxy = 98FB3B3F29C23A6E003DAFD7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		98FB3B2929C2356B003DAFD7 /* Debug */ = {
@@ -460,58 +162,6 @@
 			};
 			name = Release;
 		};
-		98FB3B2C29C2356B003DAFD7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FA6F58X42;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		98FB3B2D29C2356B003DAFD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FA6F58X42;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		98FB3B3729C236B8003DAFD7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FA6F58X42;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.LeetCodeTasks-Swift-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		98FB3B3829C236B8003DAFD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FA6F58X42;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.LeetCodeTasks-Swift-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,24 +170,6 @@
 			buildConfigurations = (
 				98FB3B2929C2356B003DAFD7 /* Debug */,
 				98FB3B2A29C2356B003DAFD7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98FB3B2B29C2356B003DAFD7 /* Build configuration list for PBXNativeTarget "LeetCodeTasks.Swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98FB3B2C29C2356B003DAFD7 /* Debug */,
-				98FB3B2D29C2356B003DAFD7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98FB3B3629C236B8003DAFD7 /* Build configuration list for PBXNativeTarget "LeetCodeTasks.Swift.Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98FB3B3729C236B8003DAFD7 /* Debug */,
-				98FB3B3829C236B8003DAFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
