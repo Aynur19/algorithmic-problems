@@ -42,7 +42,6 @@ class Task_010 {
         var pattern = Array(cleanPattern(p))
         
         var pChar: Character = " "
-        var wChar: Character = " "
         var lastChar: Character = " "
                 
         while pattern.count > 1 && !word.isEmpty {

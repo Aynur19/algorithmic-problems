@@ -20,9 +20,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "LeetCodeTasks",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources/LeetCodeTasks"),
         .testTarget(
             name: "LeetCodeTasksTests",
-            dependencies: ["LeetCodeTasks"]),
+            dependencies: ["LeetCodeTasks"],
+            path: "Tests/LeetCodeTasksTests"),
+        
     ]
 )
