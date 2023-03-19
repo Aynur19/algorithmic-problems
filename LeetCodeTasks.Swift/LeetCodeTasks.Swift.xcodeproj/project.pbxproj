@@ -6,10 +6,50 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		98113BCF29C5CC2600F45875 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98113BCE29C5CC2600F45875 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98113BCA29C5CC2500F45875 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		98113BCC29C5CC2500F45875 /* ConsoleApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConsoleApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		98113BCE29C5CC2600F45875 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98113BC929C5CC2500F45875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		98113BCD29C5CC2600F45875 /* ConsoleApp */ = {
+			isa = PBXGroup;
+			children = (
+				98113BCE29C5CC2600F45875 /* main.swift */,
+			);
+			path = ConsoleApp;
+			sourceTree = "<group>";
+		};
 		98FB3B1B29C2356B003DAFD7 = {
 			isa = PBXGroup;
 			children = (
+				98113BCD29C5CC2600F45875 /* ConsoleApp */,
 				98FB3B2529C2356B003DAFD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -17,11 +57,32 @@
 		98FB3B2529C2356B003DAFD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				98113BCC29C5CC2500F45875 /* ConsoleApp */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98113BCB29C5CC2500F45875 /* ConsoleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98113BD029C5CC2600F45875 /* Build configuration list for PBXNativeTarget "ConsoleApp" */;
+			buildPhases = (
+				98113BC829C5CC2500F45875 /* Sources */,
+				98113BC929C5CC2500F45875 /* Frameworks */,
+				98113BCA29C5CC2500F45875 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConsoleApp;
+			productName = ConsoleApp;
+			productReference = 98113BCC29C5CC2500F45875 /* ConsoleApp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		98FB3B1C29C2356B003DAFD7 /* Project object */ = {
@@ -30,6 +91,11 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					98113BCB29C5CC2500F45875 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
 			};
 			buildConfigurationList = 98FB3B1F29C2356B003DAFD7 /* Build configuration list for PBXProject "LeetCodeTasks.Swift" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -44,11 +110,45 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				98113BCB29C5CC2500F45875 /* ConsoleApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		98113BC829C5CC2500F45875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98113BCF29C5CC2600F45875 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
+		98113BD129C5CC2600F45875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FA6F58X42;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		98113BD229C5CC2600F45875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8FA6F58X42;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		98FB3B2929C2356B003DAFD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -165,6 +265,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		98113BD029C5CC2600F45875 /* Build configuration list for PBXNativeTarget "ConsoleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98113BD129C5CC2600F45875 /* Debug */,
+				98113BD229C5CC2600F45875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		98FB3B1F29C2356B003DAFD7 /* Build configuration list for PBXProject "LeetCodeTasks.Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

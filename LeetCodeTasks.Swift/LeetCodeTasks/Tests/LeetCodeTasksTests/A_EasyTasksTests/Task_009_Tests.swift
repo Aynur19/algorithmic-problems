@@ -22,7 +22,7 @@ final class Task_009_Tests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_twoSum() throws {
+    func test_isPalindrome() throws {
         XCTAssertEqual(task.isPalindrome(121), true)
         XCTAssertEqual(task.isPalindrome(-121), false)
         XCTAssertEqual(task.isPalindrome(10), false)
