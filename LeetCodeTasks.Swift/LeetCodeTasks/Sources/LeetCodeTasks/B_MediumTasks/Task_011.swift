@@ -18,13 +18,28 @@
 ///
 /// Constraints:
 /// 1) n == height.length
-/// 2) 2 <= n <= 105
-/// 3) 0 <= height[i] <= 104
+/// 2) 2 <= n <= 10^5
+/// 3) 0 <= height[i] <= 10^4
+
 
 import Foundation
 
 extension MediumTasks {
     func maxArea(_ height: [Int]) -> Int {
-        return 0
+        var maxArea = 0
+        var leftIdx = 0
+        var rightIdx = height.count - 1
+        
+        while leftIdx < rightIdx {
+            maxArea = max(maxArea, (min(height[leftIdx], height[rightIdx]) * (rightIdx - leftIdx)))
+            
+            if height[leftIdx] > height[rightIdx] {
+                rightIdx -= 1
+            } else {
+                leftIdx += 1
+            }
+        }
+        
+        return maxArea
     }
 }
