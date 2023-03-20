@@ -1,27 +1,37 @@
 //
-//  Task_010_Tests.swift
+//  HardTasks_Tests.swift
 //  
 //
-//  Created by Aynur Nasybullin on 18.03.2023.
+//  Created by Aynur Nasybullin on 20.03.2023.
 //
+
 
 import XCTest
 @testable import LeetCodeTasks
 
-final class Task_010_Tests: XCTestCase {
-    var task: Task_010!
+final class HardTasks_Tests: XCTestCase {
+    var task: HardTasks!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        task = Task_010()
+        task = HardTasks()
     }
     
     override func tearDownWithError() throws {
         task = nil
         try super.tearDownWithError()
     }
-    
+}
+
+
+extension HardTasks_Tests {
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
     func test_isMatch() throws {
         XCTAssertEqual(task.isMatch("aa", "a"), false)
         XCTAssertEqual(task.isMatch("aa", "a*"), true)
@@ -41,4 +51,17 @@ final class Task_010_Tests: XCTestCase {
         XCTAssertEqual(task.isMatch("b", "aaa."), false)
         XCTAssertEqual(task.isMatch("ab", ".*.."), true)
     }
+    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 004 ***************************
+    func test_findMedianSortedArrays() throws {
+        XCTAssertEqual(task.findMedianSortedArrays([1, 3], [2]), 2.0)
+        XCTAssertEqual(task.findMedianSortedArrays([1, 2], [3, 4]), 2.5)
+        XCTAssertEqual(task.findMedianSortedArrays([], [1]), 1.0)
+        XCTAssertEqual(task.findMedianSortedArrays([], [2, 3]), 2.5)
+        XCTAssertEqual(task.findMedianSortedArrays([], [1, 2, 3, 4]), 2.5)
+        XCTAssertEqual(task.findMedianSortedArrays([], [1, 2, 3, 4, 5]), 3.0)
+    }
+    //*************************** TASK 004 ***************************
 }

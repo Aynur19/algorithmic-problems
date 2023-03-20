@@ -23,7 +23,7 @@
 
 import Foundation
 
-class Task_010 {
+extension HardTasks {
     func cleanPattern(_ p: String) -> String {
         var pattern = p
         while pattern.contains(".*.*") {

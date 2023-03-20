@@ -21,7 +21,7 @@
 
 import Foundation
 
-class Task_004 {
+extension HardTasks {
     func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
         if nums1.isEmpty { return getMedian(nums2) }
         else if nums2.isEmpty { return getMedian(nums1) }

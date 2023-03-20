@@ -14,7 +14,7 @@
 
 import Foundation
 
-class Task_002 {
+extension MediumTasks {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         if l1 == nil { return l2 }
         else if l2 == nil { return l1 }

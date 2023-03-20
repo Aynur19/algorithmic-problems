@@ -15,7 +15,7 @@
 
 import Foundation
 
-class Task_009 {
+extension EasyTasks {
     func isPalindrome(_ x: Int) -> Bool {
         if x < 0 || x >= 10 && x % 10 == 0 { return false }
         

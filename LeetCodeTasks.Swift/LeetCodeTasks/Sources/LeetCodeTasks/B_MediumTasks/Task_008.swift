@@ -36,7 +36,7 @@
 
 import Foundation
 
-class Task_008 {
+extension MediumTasks {
     func myAtoi(_ s: String) -> Int {
         var count = 0
         var numberStr = s

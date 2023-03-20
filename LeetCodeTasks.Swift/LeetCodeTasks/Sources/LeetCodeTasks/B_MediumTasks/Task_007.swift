@@ -18,7 +18,7 @@
 
 import Foundation
 
-class Task_007 {
+extension MediumTasks {
     func reverse(_ x: Int) -> Int {
         if x > Int32.max || x < Int32.min { return 0 }
         

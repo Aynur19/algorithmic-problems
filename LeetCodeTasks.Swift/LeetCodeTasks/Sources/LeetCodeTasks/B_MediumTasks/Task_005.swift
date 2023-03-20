@@ -16,7 +16,7 @@
 
 import Foundation
 
-class Task_005 {
+extension MediumTasks {
     func longestPalindrome(_ s: String) -> String {
         if s.count < 2 { return s }
         if s.count < 3 { return s.elementsEqual(s.reversed()) ? s : String(s[s.startIndex]) }

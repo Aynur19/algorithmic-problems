@@ -16,9 +16,7 @@
 
 import Foundation
 
-class Task_003 {
-    let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ "
-    
+extension MediumTasks {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         return getLengthMaxUnique(Array(s))
     }
@@ -38,7 +36,7 @@ class Task_003 {
             count += 1
             charsDict[chars[i]] = i
             
-            if count >= alphabet.count { return count }
+            if count >= 96 { return count }
         }
         
         return count

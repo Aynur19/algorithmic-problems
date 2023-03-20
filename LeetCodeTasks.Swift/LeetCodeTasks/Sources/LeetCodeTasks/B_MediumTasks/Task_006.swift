@@ -26,7 +26,7 @@
 
 import Foundation
 
-class Task_006 {
+extension MediumTasks {
     func convert(_ s: String, _ numRows: Int) -> String {
         if s.count < 2 || numRows < 2 { return s }
 

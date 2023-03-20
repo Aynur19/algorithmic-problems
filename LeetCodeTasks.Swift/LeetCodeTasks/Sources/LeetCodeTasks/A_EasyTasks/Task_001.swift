@@ -15,7 +15,7 @@
 
 import Foundation
 
-class Task_001 {
+extension EasyTasks {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         for i in 0..<nums.count {
             if let index = nums.lastIndex(of: target - nums[i]), index != i {
