@@ -25,6 +25,21 @@ final class EasyTasks_Tests: XCTestCase {
 }
 
 extension EasyTasks_Tests {
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    
+    //*************************** TASK 013 ***************************
+    func test_romanToInt() throws {
+        XCTAssertEqual(task.romanToInt("III"), 3)
+        XCTAssertEqual(task.romanToInt("LVIII"), 58)
+        XCTAssertEqual(task.romanToInt("MCMXCIV"), 1994)
+    }
+    //*************************** TASK 013 ***************************
+    
     //*************************** TASK 009 ***************************
     func test_isPalindrome() throws {
         XCTAssertEqual(task.isPalindrome(121), true)
