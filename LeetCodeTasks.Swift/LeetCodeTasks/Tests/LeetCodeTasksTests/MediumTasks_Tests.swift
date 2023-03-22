@@ -29,6 +29,17 @@ extension MediumTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     
+    //*************************** TASK 015 ***************************
+    func test_threeSum() throws {
+        XCTAssertEqual(task.threeSum([-1, 0, 1, 2, -1, -4]), [[-1, -1, 2], [-1, 0, 1]])
+        XCTAssertEqual(task.threeSum([0, 1, 1]), [])
+        XCTAssertEqual(task.threeSum([1, 1, -2]), [[-2, 1, 1]])
+        XCTAssertEqual(task.threeSum([0, 0, 0, 0]), [[0, 0, 0]])
+        XCTAssertEqual(task.threeSum([0, 0, 0]), [[0, 0, 0]])
+        XCTAssertEqual(task.threeSum([3, 0, -2, -1, 1, 2]), [[-2, -1, 3], [-2, 0, 2], [-1, 0, 1]])
+    }
+    //*************************** TASK 015 ***************************
+    
     //*************************** TASK 012 ***************************
     func test_intToRoman() throws {
         XCTAssertEqual(task.intToRoman(3), "III")
