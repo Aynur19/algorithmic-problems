@@ -28,7 +28,13 @@ extension MediumTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
+    
     //*************************** TASK *** ***************************
+    func test_letterCombinations() throws {
+        XCTAssertEqual(task.letterCombinations("23"), ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"])
+        XCTAssertEqual(task.letterCombinations(""), [])
+        XCTAssertEqual(task.letterCombinations("2"), ["a", "b", "c"])
+    }
     //*************************** TASK *** ***************************
     
     //*************************** TASK 016 ***************************
