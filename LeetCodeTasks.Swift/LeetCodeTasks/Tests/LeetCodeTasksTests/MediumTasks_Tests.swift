@@ -28,8 +28,39 @@ extension MediumTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    //*************************** TASK 019 ***************************
+    func test_removeNthFromEnd_01() throws {
+        let l1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+        let expected = ListNode(1, ListNode(2, ListNode(3, ListNode(5))))
+        let actual = task.removeNthFromEnd(l1, 2)
+
+        try equalLists(actual, expected)
+    }
+
+    func test_removeNthFromEnd_02() throws {
+        let l1 = ListNode(1)
+        let actual = task.removeNthFromEnd(l1, 1)
+
+        XCTAssertNil(actual)
+    }
+
+    func test_removeNthFromEnd_03() throws {
+        let l1 = ListNode(1, ListNode(2))
+        let expected = ListNode(1)
+        let actual = task.removeNthFromEnd(l1, 1)
+
+        try equalLists(actual, expected)
+    }
+    
+    func test_removeNthFromEnd_04() throws {
+        let l1 = ListNode(1, ListNode(2))
+        let expected = ListNode(2)
+        let actual = task.removeNthFromEnd(l1, 2)
+
+        try equalLists(actual, expected)
+    }
+    //*************************** TASK 019 ***************************
     
     //*************************** TASK 018 ***************************
     func test_fourSum() throws { // -3  -1  0  2  5
