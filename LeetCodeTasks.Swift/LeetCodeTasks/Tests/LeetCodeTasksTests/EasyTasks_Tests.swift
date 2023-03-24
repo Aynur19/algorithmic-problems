@@ -31,8 +31,35 @@ extension EasyTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    //*************************** TASK 021 ***************************
+    func test_mergeTwoLists_01() {
+        let l1 = ListNode(1, ListNode(2, ListNode(3)))
+        let l2 = ListNode(1, ListNode(3, ListNode(4)))
+        let actual = task.mergeTwoLists(l1, l2)
+        let expected = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(4))))))
+        
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    
+    func test_mergeTwoLists_02() {
+        let l1: ListNode? = nil
+        let l2: ListNode? = nil
+        let actual = task.mergeTwoLists(l1, l2)
+        let expected: ListNode? = nil
+        
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    
+    func test_mergeTwoLists_03() {
+        let l1: ListNode? = nil
+        let l2: ListNode? = ListNode()
+        let actual = task.mergeTwoLists(l1, l2)
+        let expected: ListNode? = ListNode()
+        
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    //*************************** TASK 021 ***************************
     
     //*************************** TASK 020 ***************************
     func test_isValid() {
