@@ -35,10 +35,9 @@ extension MediumTasks_Tests {
     
     //*************************** TASK 022 ***************************
     func test_generateParenthesis() {
-//        XCTAssertEqual(task.generateParenthesis(3), ["()()()", "(())()", "((()))", "(()())", "()(())"])
-//        XCTAssertEqual(task.generateParenthesis(1), ["()"])
-//        XCTAssertEqual(task.generateParenthesis(2), ["()()", "(())"])
-        
+        XCTAssertEqual(task.generateParenthesis(3), ["()()()", "(())()", "((()))", "(()())", "()(())"])
+        XCTAssertEqual(task.generateParenthesis(1), ["()"])
+        XCTAssertEqual(task.generateParenthesis(2), ["()()", "(())"])        
         XCTAssertEqual(task.generateParenthesis(4), ["()()", "(())"])
     }
     //*************************** TASK 022 ***************************

@@ -29,9 +29,36 @@ extension HardTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
+    
+    
     //*************************** TASK *** ***************************
+    func test_mergeKLists_01() throws {
+        let l1 = ListNode(1, ListNode(4, ListNode(5)))
+        let l2 = ListNode(1, ListNode(3, ListNode(4)))
+        let l3 = ListNode(2, ListNode(6))
+        let expected = ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(4, ListNode(5, ListNode(6))))))))
+        let actual = task.mergeKLists([l1, l2, l3])
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    
+    func test_mergeKLists_02() throws {
+        let expected: ListNode? = nil
+        let actual = task.mergeKLists([nil])
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    
+    func test_mergeKLists_03() throws {
+        let expected: ListNode? = nil
+        let actual = task.mergeKLists([])
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 010 ***************************
     func test_isMatch() throws {
         XCTAssertEqual(task.isMatch("aa", "a"), false)
         XCTAssertEqual(task.isMatch("aa", "a*"), true)
@@ -51,7 +78,7 @@ extension HardTasks_Tests {
         XCTAssertEqual(task.isMatch("b", "aaa."), false)
         XCTAssertEqual(task.isMatch("ab", ".*.."), true)
     }
-    //*************************** TASK *** ***************************
+    //*************************** TASK 010 ***************************
     
     
     //*************************** TASK 004 ***************************
