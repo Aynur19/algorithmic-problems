@@ -27,8 +27,31 @@ final class EasyTasks_Tests: XCTestCase {
 extension EasyTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 027 ***************************
+    func test_removeElement_01() throws {
+        var nums = [3, 2, 2, 3]
+        let expectedNums = [2, 2]
+        let k = task.removeElement(&nums, 3)
+        
+        XCTAssertEqual(k, expectedNums.count)
+        for i in 0..<k {
+            XCTAssertEqual(nums[i], expectedNums[i])
+        }
+    }
+    
+    func test_removeElement_02() throws {
+        var nums = [0, 1, 2, 2, 3, 0, 4, 2]
+        let expectedNums = [0, 1, 3, 0, 4]
+        let k = task.removeElement(&nums, 2)
+        
+        XCTAssertEqual(k, expectedNums.count)
+        for i in 0..<k {
+            XCTAssertEqual(nums[i], expectedNums[i])
+        }
+    }
+    //*************************** TASK 027 ***************************
     
     
     //*************************** TASK 026 ***************************
