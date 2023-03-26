@@ -29,9 +29,34 @@ extension HardTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    
-    
     //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 025 ***************************
+    func test_reverseKGroup_01() throws {
+        let l1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+        let expected = ListNode(2, ListNode(1, ListNode(4, ListNode(3, ListNode(5)))))
+        let actual = task.reverseKGroup(l1, 2)
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    
+    func test_reverseKGroup_02() throws {
+        let l1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+        let expected = ListNode(3, ListNode(2, ListNode(1, ListNode(4, ListNode(5)))))
+        let actual = task.reverseKGroup(l1, 3)
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    //*************************** TASK 025 ***************************
+    
+    
+    //*************************** TASK 023 ***************************
     func test_mergeKLists_01() throws {
         let l1 = ListNode(1, ListNode(4, ListNode(5)))
         let l2 = ListNode(1, ListNode(3, ListNode(4)))
@@ -55,7 +80,7 @@ extension HardTasks_Tests {
 
         XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
     }
-    //*************************** TASK *** ***************************
+    //*************************** TASK 023 ***************************
     
     
     //*************************** TASK 010 ***************************
