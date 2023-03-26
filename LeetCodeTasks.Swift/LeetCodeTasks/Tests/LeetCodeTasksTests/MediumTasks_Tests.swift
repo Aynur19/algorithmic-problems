@@ -30,8 +30,32 @@ extension MediumTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 023 ***************************
+    func test_swapPairs_01() throws {
+        let l1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
+        let expected = ListNode(2, ListNode(1, ListNode(4, ListNode(3))))
+        let actual = task.swapPairs(l1)
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+
+    func test_swapPairs_02() throws {
+        let actual = task.swapPairs(nil)
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: nil, l2: actual))
+    }
+    
+    func test_swapPairs_03() throws {
+        let l1 = ListNode(1)
+        let expected = ListNode(1)
+        let actual = task.swapPairs(l1)
+
+        XCTAssertTrue(ListNode.equalListNodes(l1: expected, l2: actual))
+    }
+    //*************************** TASK 023 ***************************
+    
     
     //*************************** TASK 022 ***************************
     func test_generateParenthesis() {
