@@ -33,8 +33,16 @@ extension HardTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 030 ***************************
+    func test_findSubstring() throws {
+        XCTAssertEqual(task.findSubstring("barfoothefoobarman", ["foo", "bar"]), [0, 9])
+        XCTAssertEqual(task.findSubstring("wordgoodgoodgoodbestword", ["word", "good", "best", "word"]), [])
+        XCTAssertEqual(task.findSubstring("barfoofoobarthefoobarman", ["bar", "foo", "the"]), [6, 9, 12])
+        XCTAssertEqual(task.findSubstring("wordgoodgoodgoodbestword", ["word", "good", "best", "good"]), [8])
+    }
+    //*************************** TASK 030 ***************************
     
     
     //*************************** TASK 025 ***************************
