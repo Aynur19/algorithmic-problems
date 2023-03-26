@@ -29,8 +29,32 @@ extension EasyTasks_Tests {
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
     //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
-    //*************************** TASK *** ***************************
+    
+    
+    //*************************** TASK 026 ***************************
+    func test_removeDuplicates_01() throws {
+        var nums = [1, 1, 2]
+        let expectedNums = [1, 2]
+        let k = task.removeDuplicates(&nums)
+        
+        XCTAssertEqual(k, expectedNums.count)
+        for i in 0..<k {
+            XCTAssertEqual(nums[i], expectedNums[i])
+        }
+    }
+    
+    func test_removeDuplicates_02() {
+        var nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+        let expectedNums = [0, 1, 2, 3, 4]
+        let k = task.removeDuplicates(&nums)
+
+        XCTAssertEqual(k, expectedNums.count)
+        for i in 0..<k {
+            XCTAssertEqual(nums[i], expectedNums[i])
+        }
+    }
+    //*************************** TASK 026 ***************************
+    
     
     //*************************** TASK 021 ***************************
     func test_mergeTwoLists_01() {
