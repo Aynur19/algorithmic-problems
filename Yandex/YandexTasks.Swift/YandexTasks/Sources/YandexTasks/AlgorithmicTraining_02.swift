@@ -30,10 +30,34 @@ class AlgorithmicTraining_02 {
         
         return max - min
     }
+    
+    func problem_B(_ line1: String, _ line2: String) -> String {
+        var msg = ""
+        while msg.count < line2.count {
+            msg = "\(msg)\(line1)"
+        }
+
+        var pref = Array(msg)
+        while !pref.isEmpty {
+            if line2.hasPrefix(String(pref)) { break }
+            
+            pref.removeFirst()
+        }
+
+        let prefStr = String(pref)
+        var needAdd: String = ""
+        
+        if !prefStr.isEmpty {
+            needAdd = String(line2[prefStr.endIndex...])
+        } else {
+            needAdd = line2
+        }
+        
+        return needAdd
+    }
 }
 
-//  SOLUTIONS:
-//  PROBLEM A:
+//  EXAMPLE:
 //
 //  var line1 = readLine()!
 //  var line2 = readLine()!
@@ -42,3 +66,5 @@ class AlgorithmicTraining_02 {
 //  var result = solutions.problem_A(line1, line2)
 //
 //  print(result)
+
+
