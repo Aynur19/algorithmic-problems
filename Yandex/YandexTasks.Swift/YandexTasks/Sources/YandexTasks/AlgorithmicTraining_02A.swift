@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgorithmicTraining_02 {
+class AlgorithmicTraining_02A {
     func problem_A(_ line1: String, _ line2: String) -> Int {
         let ln1 = line1.split(separator: " ")
         let ln2 = line2.split(separator: " ")
@@ -62,7 +62,7 @@ class AlgorithmicTraining_02 {
 //  var line1 = readLine()!
 //  var line2 = readLine()!
 //
-//  var solutions = AlgorithmicTraining_02()
+//  var solutions = AlgorithmicTraining_02A()
 //  var result = solutions.problem_A(line1, line2)
 //
 //  print(result)

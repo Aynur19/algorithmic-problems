@@ -8,14 +8,14 @@
 import XCTest
 @testable import YandexTasks
 
-final class AlgorithmicTraining_02_Tests: XCTestCase {
+final class AlgorithmicTraining_02A_Tests: XCTestCase {
 
-    public var task: AlgorithmicTraining_02!
+    public var task: AlgorithmicTraining_02A!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        task = AlgorithmicTraining_02()
+        task = AlgorithmicTraining_02A()
     }
     
     override func tearDownWithError() throws {
@@ -26,7 +26,7 @@ final class AlgorithmicTraining_02_Tests: XCTestCase {
 
 
 
-extension AlgorithmicTraining_02_Tests {
+extension AlgorithmicTraining_02A_Tests {
     func test_problem_B() throws {
         XCTAssertEqual(task.problem_B("mama", "amamam"), "m")
         XCTAssertEqual(task.problem_B("ura", "mura"), "mura")

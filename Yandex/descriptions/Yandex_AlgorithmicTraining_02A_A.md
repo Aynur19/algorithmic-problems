@@ -1,13 +1,17 @@
+[⬅️ MAIN][main]
+
+[⬅️ Yandex][Yandex]  
+
 # Яндекс. Тренировки по алгоритмам 2.0, занятие 2 (A)
 
 ## A. Забавный конфуз
 
 |||
-|---|---|
-|Ограничение времени |	1 секунда|
-|Ограничение памяти |64Mb|
-|Ввод |стандартный ввод или input.txt|
-|Вывод |стандартный вывод или output.txt|
+| --- | --- |
+| Ограничение времени |	1 секунда|
+| Ограничение памяти |64Mb|
+| Ввод |стандартный ввод или input.txt|
+| Вывод |стандартный вывод или output.txt|
 
 Пусть ${A}$ — массив, состоящий из ${N}$ элементов ${A_1, …, A_N}$. Обозначим его максимальное и минимальное значение через ${max(A)}$ и ${min(A)}$ соответственно. Вычислим сумму элементов ${S}$, ${S = A_1 + A_2 + … + A_N}$. Заменим каждый элемент массива на разницу ${S}$ и этого элемента:
 
@@ -28,10 +32,13 @@ ${A_i:=S-A_i, 1 \leq i \leq N}$
 |45 52 47 46|| 
 ||7|
 
-### Решение
+### Решение (Swift)
+
+1. [AlgorithmicTraining_02A.swift][AlgorithmicTraining_02A]
+2. [AlgorithmicTraining_02A_Tests.swift][AlgorithmicTraining_02A_Tests]
 
 ```swift
-class AlgorithmicTraining_02 {
+class AlgorithmicTraining_02A {
     func problem_A(_ line1: String, _ line2: String) -> Int {
         let ln1 = line1.split(separator: " ")
         let ln2 = line2.split(separator: " ")
@@ -59,8 +66,16 @@ class AlgorithmicTraining_02 {
 var line1 = readLine()!
 var line2 = readLine()!
 
-var solutions = AlgorithmicTraining_02()
+var solutions = AlgorithmicTraining_02A()
 var result = solutions.problem_A(line1, line2)
 
 print(result)
 ```
+
+---
+[main]: ./../../README.md
+[Yandex]: ./../README.md
+
+[AlgorithmicTraining_02A]: ./../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_02A.swift
+
+[AlgorithmicTraining_02A_Tests]: ./../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_02A_Tests.swift
