@@ -82,23 +82,34 @@ class AlgorithmicTraining_02A {
         
         return p
     }
+    
+    func problem_D(_ line1: String, _ line2: String) -> Int {
+        let count = Int(line1)!
+        let lengthsStr = line2.split(separator: " ")
+        var lengths: [Int] = []
+
+        for i in 0..<count {
+            lengths.append(Int(lengthsStr[i])!)
+        }
+        
+        let max = lengths.max()!
+        let sum = lengths.reduce(0, +)
+        
+        for i in 1...sum where (sum + i) % 2 == 0 {
+            if sum - max + i == max {
+                return i
+            }
+        }
+        
+        return sum
+    }
 }
 
-//  EXAMPLE:
-//
-
 //var line1 = readLine()!
-//let count = Int(line1)!
-//
-//var line2: [String] = []
-//
-//for i in 0..<count {
-//    let coords = readLine()!
-//    line2.append(coords)
-//}
+//var line2 = readLine()!
 //
 //var solutions = AlgorithmicTraining_02A()
-//var result = solutions.problem_B(count, line2)
+//var result = solutions.problem_D(line1, line2)
 //
 //print(result)
 
