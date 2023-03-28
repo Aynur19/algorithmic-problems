@@ -55,16 +55,51 @@ class AlgorithmicTraining_02A {
         
         return needAdd
     }
+    
+    func problem_C(_ n: Int, _ coords: [String]) -> Int {
+        var p = n * 4
+        
+        var dict: [Int:String] = [:]
+        var x = 0, y = 0
+        
+        coords.forEach { xy in
+            let xyStr = xy.split(separator: " ")
+            x = Int(xyStr[0])!
+            y = Int(xyStr[1])!
+            
+            dict[x * 10 + y] = xy
+        }
+        
+        dict.forEach { (k, v) in
+            if dict[k - 10] != nil {
+                p -= 2
+            }
+            
+            if dict[k - 1] != nil {
+                p -= 2
+            }
+        }
+        
+        return p
+    }
 }
 
 //  EXAMPLE:
 //
-//  var line1 = readLine()!
-//  var line2 = readLine()!
+
+//var line1 = readLine()!
+//let count = Int(line1)!
 //
-//  var solutions = AlgorithmicTraining_02A()
-//  var result = solutions.problem_A(line1, line2)
+//var line2: [String] = []
 //
-//  print(result)
+//for i in 0..<count {
+//    let coords = readLine()!
+//    line2.append(coords)
+//}
+//
+//var solutions = AlgorithmicTraining_02A()
+//var result = solutions.problem_B(count, line2)
+//
+//print(result)
 
 
