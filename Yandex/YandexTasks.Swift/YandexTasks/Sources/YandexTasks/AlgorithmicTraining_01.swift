@@ -8,6 +8,31 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_D(_ lines: [String]) -> [String] {
+        let args = (a: Int(lines[0])!, b: Int(lines[1])!, c: Int(lines[2])!)
+        guard args.c >= 0 else { return ["NO SOLUTION"] }
+        
+        if args.a == 0 {
+            if args.b < 0 || args.b != args.c * args.c { return ["NO SOLUTION"] }
+            else { return ["MANY SOLUTIONS"] }
+        }
+        
+        let x = (args.c * args.c - args.b) / args.a
+        var check = args.a * x + args.b == args.c * args.c
+        
+        if check {
+            if args.a * (-x) + args.b >= 0 {
+                check = Int(sqrt(Double(args.a * (-x) + args.b))) == args.c
+                
+                if check && x != -x {
+                    return x < -x ? ["\(x)", "\(-x)"] : ["\(-x)", "\(x)"]
+                }
+            }
+        } else { return ["NO SOLUTION"] }
+        
+        return ["\(x)"]
+    }
+    
     func problem_C(_ lines: [String]) -> [String] {
         var phone: String = ""
         var result: [String] = []
@@ -55,14 +80,14 @@ class AlgorithmicTraining_01 {
     }
 }
 
-//var lines: String[] = []
+//var lines: [String] = []
 //
-//for i in 0..<4 {
+//for i in 0..<3 {
 //    lines.append(readLine()!)
 //}
 //
 //let solution = AlgorithmicTraining_01()
-//let result = solution.problem_B(line1, line2, line3)
+//let result = solution.problem_D(lines)
 //
 //for i in 0..<result.count {
 //    print(result[i])
