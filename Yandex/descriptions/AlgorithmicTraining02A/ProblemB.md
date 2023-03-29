@@ -97,9 +97,9 @@ print(result)
 ```
 
 ---
-[main]: ./../../README.md
-[Yandex]: ./../README.md
+[main]: ./../../../README.md
+[Yandex]: ./../../README.md
 
-[AlgorithmicTraining_02A]: ./../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_02A.swift
+[AlgorithmicTraining_02A]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_02A.swift
 
-[AlgorithmicTraining_02A_Tests]: ./../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_02A_Tests.swift
+[AlgorithmicTraining_02A_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_02A_Tests.swift

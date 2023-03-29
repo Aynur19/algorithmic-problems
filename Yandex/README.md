@@ -15,11 +15,10 @@
 ---
 [main]: ./../README.md
 
-[Yandex_AT_02A]: ./Yandex_AlgorithmicTraining_02A.md
 [Yandex_AT_02A_orig]: https://contest.yandex.ru/contest/28736/
 
-[Yandex_AT_02A_A]: ./descriptions/Yandex_AlgorithmicTraining_02A_A.md
-[Yandex_AT_02A_B]: ./descriptions/Yandex_AlgorithmicTraining_02A_B.md
-[Yandex_AT_02A_C]: ./descriptions/Yandex_AlgorithmicTraining_02A_C.md
-[Yandex_AT_02A_D]: ./descriptions/Yandex_AlgorithmicTraining_02A_D.md
-[Yandex_AT_02A_E]: ./descriptions/Yandex_AlgorithmicTraining_02A_E.md
+[Yandex_AT_02A_A]: ./descriptions/AlgorithmicTraining02A/ProblemA.md
+[Yandex_AT_02A_B]: ./descriptions/AlgorithmicTraining02A/ProblemB.md
+[Yandex_AT_02A_C]: ./descriptions/AlgorithmicTraining02A/ProblemC.md
+[Yandex_AT_02A_D]: ./descriptions/AlgorithmicTraining02A/ProblemD.md
+[Yandex_AT_02A_E]: ./descriptions/AlgorithmicTraining02A/ProblemE.md
