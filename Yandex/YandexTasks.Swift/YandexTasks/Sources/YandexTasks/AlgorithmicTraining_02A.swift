@@ -22,7 +22,7 @@ class AlgorithmicTraining_02A {
             if min > tmp {
                 min = tmp
             }
-        
+            
             if max < tmp {
                 max = tmp
             }
@@ -36,14 +36,14 @@ class AlgorithmicTraining_02A {
         while msg.count < line2.count {
             msg = "\(msg)\(line1)"
         }
-
+        
         var pref = Array(msg)
         while !pref.isEmpty {
             if line2.hasPrefix(String(pref)) { break }
             
             pref.removeFirst()
         }
-
+        
         let prefStr = String(pref)
         var needAdd: String = ""
         
@@ -87,7 +87,7 @@ class AlgorithmicTraining_02A {
         let count = Int(line1)!
         let lengthsStr = line2.split(separator: " ")
         var lengths: [Int] = []
-
+        
         for i in 0..<count {
             lengths.append(Int(lengthsStr[i])!)
         }
@@ -103,13 +103,51 @@ class AlgorithmicTraining_02A {
         
         return sum
     }
+    
+    func problem_E(_ line1: String, _ line2: String) -> Int {
+        let args1 = line1.split(separator: " ").map({ Int($0)! })
+        let args2 = line2.split(separator: " ").map({ Int($0)! })
+
+        var mower = (l: args1[0], b: args1[1], r: args1[2], t: args1[3])
+        let sprinkler = (x: args2[0], y: args2[1], r: args2[2])
+
+        mower.l = min(mower.l, mower.r)
+        mower.r = max(mower.l, mower.r)
+        mower.b = min(mower.b, mower.t)
+        mower.t = max(mower.b, mower.t)
+
+        let startY = max(mower.b, sprinkler.y - sprinkler.r)
+        let endY = min(mower.t, sprinkler.y + sprinkler.r)
+        let r2 = Double(sprinkler.r * sprinkler.r)
+
+        var area = 0
+        var deltaX: Double
+        var minX = 0, maxX = 0
+        var leftX = 0, rightX = 0
+
+
+        for y in startY...endY {
+            deltaX = sqrt(r2 - Double((y - sprinkler.y) * (y - sprinkler.y)))
+            rightX = Int(floor(Double(sprinkler.x) + deltaX))
+            leftX = Int(ceil(Double(sprinkler.x) - deltaX))
+
+            maxX = min(mower.r, rightX)
+            minX = max(mower.l, leftX)
+
+            if maxX >= minX {
+                area += maxX - minX + 1
+            }
+        }
+
+        return area
+    }
 }
 
 //var line1 = readLine()!
 //var line2 = readLine()!
 //
 //var solutions = AlgorithmicTraining_02A()
-//var result = solutions.problem_D(line1, line2)
+//var result = solutions.problem_E(line1, line2)
 //
 //print(result)
 
