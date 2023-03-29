@@ -26,6 +26,12 @@ final class AlgorithmicTraining_01_Tests: XCTestCase {
 
 
 extension AlgorithmicTraining_01_Tests {
+    func test_problem_B() throws {
+        XCTAssertEqual(task.problem_B("3", "4", "5"), "YES")
+        XCTAssertEqual(task.problem_B("3", "5", "4"), "YES")
+        XCTAssertEqual(task.problem_B("4", "5", "3"), "YES")
+    }
+    
     func test_problem_A() throws {
         XCTAssertEqual(task.problem_A("10 20", "heat"), 20)
         XCTAssertEqual(task.problem_A("10 20", "freeze"), 10)
