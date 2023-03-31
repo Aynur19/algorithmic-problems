@@ -26,6 +26,35 @@ final class AlgorithmicTraining_01_Tests: XCTestCase {
 
 
 extension AlgorithmicTraining_01_Tests {
+    func test_Task1() throws {
+        XCTAssertEqual(task.task1(3, ["APPLICATION_FINISHED_LAUNCHING",
+                                      "111",
+                                      "APPLICATION_TERMINATED",
+                                      "111",
+                                      "APPLICATION_FINISHED_LAUNCHING",
+                                      "111"]), 50.0)
+        
+        XCTAssertEqual(task.task1(6, ["APPLICATION_FINISHED_LAUNCHING",
+                                      "111",
+                                      "UI_SHOWN",
+                                      "111",
+                                      "APPLICATION_FINISHED_LAUNCHING",
+                                      "1337",
+                                      "APPLICATION_TERMINATED",
+                                      "1337",
+                                      "PUSH_RECIEVED",
+                                      "111",
+                                      "APPLICATION_TERMINATED",
+                                      "111"]), 0.0)
+
+    }
+    
+    func test_problem_E() throws {
+        XCTAssertEqual(task.problem_E("89 20 41 1 11"), [2, 3])
+        XCTAssertEqual(task.problem_E("11 1 1 1 1"), [0, 1])
+        XCTAssertEqual(task.problem_E("3 2 2 2 1"), [-1, -1])
+    }
+    
     func test_problem_D() throws {
         XCTAssertEqual(task.problem_D(["1", "0", "0"]), ["0"])
         XCTAssertEqual(task.problem_D(["1", "2", "3"]), ["7"])
@@ -41,10 +70,6 @@ extension AlgorithmicTraining_01_Tests {
         XCTAssertEqual(task.problem_D(["1", "-1", "1"]), ["2"])
         XCTAssertEqual(task.problem_D(["-1", "-1", "1"]), ["-2"])
         XCTAssertEqual(task.problem_D(["6", "1", "10"]), ["NO SOLUTION"])
-
-//        XCTAssertEqual(task.problem_D(["1", "2", "-3"]), ["NO SOLUTION"])
-//        XCTAssertEqual(task.problem_D(["1", "2", "3"]), ["7"])
-//        XCTAssertEqual(task.problem_D(["1", "2", "-3"]), ["NO SOLUTION"])
     }
     
     func test_problem_C() throws {

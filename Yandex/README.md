@@ -14,6 +14,7 @@
 ## [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig] 
 Решения задач:
 1. [A. Кондиционер][Yandex_AT_01_A]
+1. [B. Треугольник][Yandex_AT_01_B]
 
 
 ---
@@ -21,6 +22,7 @@
 
 [Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
 [Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md
+[Yandex_AT_01_B]: ./descriptions/AlgorithmicTraining01/ProblemB.md
 
 [Yandex_AT_02A_orig]: https://contest.yandex.ru/contest/28736/
 [Yandex_AT_02A_A]: ./descriptions/AlgorithmicTraining02A/ProblemA.md
