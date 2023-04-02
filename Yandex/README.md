@@ -11,12 +11,14 @@
 2. [B. Треугольник][Yandex_AT_01_B]
 3. [C. Телефонные номера][Yandex_AT_01_C]
 4. [D. Уравнение с корнем][Yandex_AT_01_D]
+4. [E. Скорая помощь][Yandex_AT_01_E]
 
 [Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
 [Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md
 [Yandex_AT_01_B]: ./descriptions/AlgorithmicTraining01/ProblemB.md
 [Yandex_AT_01_C]: ./descriptions/AlgorithmicTraining01/ProblemC.md
 [Yandex_AT_01_D]: ./descriptions/AlgorithmicTraining01/ProblemD.md
+[Yandex_AT_01_E]: ./descriptions/AlgorithmicTraining01/ProblemE.md
 ---
 
 ## [Яндекс. Тренировки по алгоритмам 2.0, занятие 2 (A)][Yandex_AT_02A_orig] 
