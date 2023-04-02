@@ -1,6 +1,23 @@
 [⬅️ MAIN][main]
 
+[main]: ./../README.md
+---
+
 # Алгоритмические задания от компании Yandex
+
+## [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig] 
+Решения задач:
+1. [A. Кондиционер][Yandex_AT_01_A]
+2. [B. Треугольник][Yandex_AT_01_B]
+3. [C. Телефонные номера][Yandex_AT_01_C]
+4. [D. Уравнение с корнем][Yandex_AT_01_D]
+
+[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
+[Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md
+[Yandex_AT_01_B]: ./descriptions/AlgorithmicTraining01/ProblemB.md
+[Yandex_AT_01_C]: ./descriptions/AlgorithmicTraining01/ProblemC.md
+[Yandex_AT_01_D]: ./descriptions/AlgorithmicTraining01/ProblemD.md
+---
 
 ## [Яндекс. Тренировки по алгоритмам 2.0, занятие 2 (A)][Yandex_AT_02A_orig] 
 Решения задач:
@@ -11,20 +28,6 @@
 2. [E. Газон][Yandex_AT_02A_E]
 
 
-## [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig] 
-Решения задач:
-1. [A. Кондиционер][Yandex_AT_01_A]
-2. [B. Треугольник][Yandex_AT_01_B]
-3. [C. Телефонные номера][Yandex_AT_01_C]
-
-
----
-[main]: ./../README.md
-
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md
-[Yandex_AT_01_B]: ./descriptions/AlgorithmicTraining01/ProblemB.md
-[Yandex_AT_01_C]: ./descriptions/AlgorithmicTraining01/ProblemC.md
 
 [Yandex_AT_02A_orig]: https://contest.yandex.ru/contest/28736/
 [Yandex_AT_02A_A]: ./descriptions/AlgorithmicTraining02A/ProblemA.md
@@ -32,3 +35,4 @@
 [Yandex_AT_02A_C]: ./descriptions/AlgorithmicTraining02A/ProblemC.md
 [Yandex_AT_02A_D]: ./descriptions/AlgorithmicTraining02A/ProblemD.md
 [Yandex_AT_02A_E]: ./descriptions/AlgorithmicTraining02A/ProblemE.md
+---
