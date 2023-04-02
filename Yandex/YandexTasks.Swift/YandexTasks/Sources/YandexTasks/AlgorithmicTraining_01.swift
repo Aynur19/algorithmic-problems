@@ -8,83 +8,59 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
-    func task1(_ n: Int, _ lines: [String]) -> Double {
-        var sessions: [String:String] = [:]
-        var successCount = 0
-        var errorCount = 0
-        var i = 0
-        
-        while i < lines.count - 1 {
-            if sessions[lines[i + 1]] == nil {
-                if lines[i] == "APPLICATION_FINISHED_LAUNCHING" {
-                    sessions[lines[i + 1]] = lines[i]
-                }
-            } else {
-                if lines[i] == "APPLICATION_FINISHED_LAUNCHING" {
-                    errorCount += 1
-                } else if lines[i] == "APPLICATION_TERMINATED" {
-                    successCount += 1
-                }
-                
-                sessions.removeValue(forKey: lines[i + 1])
-            }
-            
-            i += 2
-        }
-        
-        errorCount += sessions.count
-        
-        if errorCount == 0 { return 0 }
-        
-        return Double(errorCount) / Double(successCount + errorCount) * 100
-    }
-    
     func problem_E(_ line1: String) -> [Int] {
         let args = line1.split(separator: " ")
-        let h = (k1: Int(args[0])!, m: Int(args[1])!, k2: Int(args[2])!, p2: Int(args[3])!, n2: Int(args[4])!)
+        let h = (k1: Int(args[0])!,
+                 m: Int(args[1])!,
+                 k2: Int(args[2])!, p2: Int(args[3])!, n2: Int(args[4])!)
         
         guard h.k1 > 0 && h.m > 0 && h.k2 > 0 && h.p2 > 0 && h.n2 > 0 else { return [-1, -1] }
-        
+        guard h.n2 <= h.m && h.n2 <= h.k2 && h.p2 <= h.k2 else { return [-1, -1] }
         if h.k2 == 1 && (h.n2 != 1 || h.p2 != 1)  { return [-1, -1] }
-        if h.n2 > h.m { return [-1, -1] }
-        if h.n2 > h.k2 { return [-1, -1] }
-        if h.p2 > h.k2 { return [-1, -1] }
-//        if h.k2 == 1 {
-//            if h.m == 1 {
-//                return h.k1 <= h.m ? [1, 1] : [0, 1]
-//            } else {
-//                return h.k1 <= h.m ? [1, 0] : [0, 0]
-//            }
-//        }
         
-        var result = (p1: 0, n1: 0)
+        var result = (p1: -1, n1: -1)
+        
         let n2 = (h.p2 - 1) * h.m + h.n2
         if n2 > h.k2 { return [-1, -1] }
-        
+                
         let apartmetsPerFloor = h.k2 / n2 + (h.k2 % n2 == 0 ? 0 : 1)
-        if apartmetsPerFloor * (h.n2 - 1) > h.k2 { return [-1, -1] }
+        if apartmetsPerFloor * (n2 - 1) > h.k2 { return [-1, -1] }
         
-//        result.n1 = apartmetsPerFloor * (h.n2 - 1)
-        result.n1 = h.k1 / apartmetsPerFloor + (h.k1 % apartmetsPerFloor == 0 ? 0 : 1)
-        result.p1 = result.n1 / h.m
-        result.n1 = result.n1 - (result.p1 - 1) * h.m
-//
-//        if n2 == 1 {
-//            if h.k2 >= h.k1 { return [1, 1] }
-//            else {
-//                return h.m == 1 ? [0, 1] : [0, 0]
-//            }
-//        }
-        // кв 7, эт 2
+        if n2 == 1 {
+            if h.k1 <= h.k2 { return [1, 1] }
+            else if h.k1 <= h.m * h.k2 {
+                return h.m == 1 ? [1, 1] : [1, 0]
+            }
+            else {
+                return h.m == 1 ? [0, 1] : [0, 0]
+                
+            }
+        }
         
+        let apartmetsPerFloor2 = (h.k2 - 1) / (n2 - 1)
+        let bounds = (l: min(apartmetsPerFloor, apartmetsPerFloor2),
+                      r: max(apartmetsPerFloor, apartmetsPerFloor2))
         
-//        result.n1 = Int(ceil(Double(h.k1) / Double(apartmetsPerFloor)))
-        
-        result.p1 = Int(ceil(Double(result.n1) / Double(h.m)))
-        result.n1 = result.n1 - (result.p1 - 1) * h.m
-        
-        if result.p1 <= 0 || result.n1 <= 0 { return [-1, -1] }
-    
+        for apf in bounds.l...bounds.r {
+            var n1 = h.k1 / apf + (h.k1 % apf == 0 ? 0 : 1)
+            let p1 = n1 / h.m + (n1 % h.m == 0 ? 0 : 1)
+            n1 = n1 - (p1 - 1) * h.m
+            
+            if result.n1 == -1 {
+                result.n1 = n1
+            } else if result.n1 != n1 {
+                result.n1 = 0
+            }
+            
+            if result.p1 == -1 {
+                result.p1 = p1
+            } else if result.p1 != p1 {
+                result.p1 = 0
+            }
+            
+            if result.n1 == 0 && result.p1 == 0 { break }
+        }
+                
         return [result.p1, result.n1]
     }
     
@@ -165,52 +141,6 @@ class AlgorithmicTraining_01 {
 //let solution = AlgorithmicTraining_01()
 //let result = solution.problem_E(line1)
 //
-//for i in 0..<result.count {
-//    print(result[i])
-//}
 
-func task1(_ n: Int, _ lines: [String]) -> Double {
-    var sessions: [String:String] = [:]
-    var successCount = 0
-    var errorCount = 0
-    var i = 0
-    
-    while i < lines.count - 1 {
-        if sessions[lines[i + 1]] == nil {
-            if lines[i] == "APPLICATION_FINISHED_LAUNCHING" {
-                sessions[lines[i + 1]] = lines[i]
-            }
-        } else {
-            if lines[i] == "APPLICATION_FINISHED_LAUNCHING" {
-                errorCount += 1
-            } else if lines[i] == "APPLICATION_TERMINATED" {
-                successCount += 1
-            }
-            
-            sessions.removeValue(forKey: lines[i + 1])
-        }
-        
-        i += 2
-    }
-    
-    errorCount += sessions.count
-    
-    if errorCount == 0 { return 0 }
-    
-    return Double(errorCount) / Double(successCount + errorCount) * 100
-}
+//print("\(result[0]) \(result[1])")
 
-//var n = Int(readLine()!)!
-//var lines: [String] = []
-//var i = 0
-//var line = ""
-//
-//while i < n {
-//    line = readLine()
-//}
-//for i in 0..<n*2 {
-//    
-//    lines.append(readLine()!)
-//}
-//
-//task1(n, lines)
