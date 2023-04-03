@@ -8,6 +8,25 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_G(_ line: String) -> Int {
+        let args = line.split(separator: " ").map({ Int($0)! })
+        guard args[0] >= args[1], args[1] >= args[2] else { return 0 }
+
+        var metal = args[0]
+        var count = 0
+        var production = (residue: 0, count: 0)
+        let tuck = (residue: args[1] % args[2], count: args[1] / args[2])
+        
+        while metal >= args[1] {
+            production.residue = metal % args[1]
+            production.count = metal / args[1]
+            metal = tuck.residue * production.count + production.residue
+            count += production.count * tuck.count
+        }
+        
+        return count
+    }
+    
     func problem_F(_ line: String) -> [Int] {
         let sizes = line.split(separator: " ").map({ Int($0)! })
         let l1 = (min: min(sizes[0], sizes[1]), max: max(sizes[0], sizes[1]))
@@ -158,7 +177,7 @@ class AlgorithmicTraining_01 {
 //var line = readLine()!
 //
 //let solution = AlgorithmicTraining_01()
-//let result = solution.problem_F(line)
+//let result = solution.problem_G(line)
 //
-//print("\(result[0]) \(result[1])")
+//print("\(result)")
 

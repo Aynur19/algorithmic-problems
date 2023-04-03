@@ -24,9 +24,15 @@ final class AlgorithmicTraining_01_Tests: XCTestCase {
 }
 
 extension AlgorithmicTraining_01_Tests {
+    func test_problem_G() throws {
+        XCTAssertEqual(task.problem_G("10 5 2"), 4)
+        XCTAssertEqual(task.problem_G("13 5 3"), 3)
+        XCTAssertEqual(task.problem_G("14 5 3"), 4)
+    }
+    
     func test_problem_F() throws {
-//        XCTAssertTrue([[20, 2], [2, 20], [4, 10], [10, 4]].contains(task.problem_F("10 2 2 10")))
-//        XCTAssertTrue([[9, 5], [5, 9]].contains(task.problem_F("5 7 3 2")))
+        XCTAssertTrue([[20, 2], [2, 20], [4, 10], [10, 4]].contains(task.problem_F("10 2 2 10")))
+        XCTAssertTrue([[9, 5], [5, 9]].contains(task.problem_F("5 7 3 2")))
         XCTAssertTrue([[2, 1], [1, 2]].contains(task.problem_F("1 1 1 1")))
         XCTAssertTrue([[12, 2], [2, 12]].contains(task.problem_F("10 2 2 2")))
     }
