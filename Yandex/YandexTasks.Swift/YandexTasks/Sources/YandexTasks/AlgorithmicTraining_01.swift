@@ -8,6 +8,17 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_I(_ a: Int, _ b: Int, _ c: Int, _ d: Int, _ e: Int) -> String {
+        let holeSizes = [d, e].sorted()
+        let brickSizes = [a, b, c].sorted()
+        
+        if brickSizes[0] <= holeSizes[0] && brickSizes[1] <= holeSizes[1] {
+            return "YES"
+        }
+
+        return "NO"
+    }
+    
     func problem_H(_ a: Int, _ b: Int, _ n: Int, _ m: Int) -> [Int] {
         let platform1 = (min: (1 + a) * n - a, max: (1 + a) * n + a)
         let platform2 = (min: (1 + b) * m - b, max: (1 + b) * m + b)
@@ -185,13 +196,14 @@ class AlgorithmicTraining_01 {
     }
 }
 
-//var a = Int(readLine()!)!
-//var b = Int(readLine()!)!
-//var n = Int(readLine()!)!
-//var m = Int(readLine()!)!
+//let a = Int(readLine()!)!
+//let b = Int(readLine()!)!
+//let c = Int(readLine()!)!
+//let d = Int(readLine()!)!
+//let e = Int(readLine()!)!
 //
 //let solution = AlgorithmicTraining_01()
-//let result = solution.problem_H(a, b, n, m)
+//let result = solution.problem_I(a, b, c, d, e)
 //
-//result.count == 1 ? print("\(result[0])") : print("\(result[0]) \(result[1])")
+//print("\(result)")
 
