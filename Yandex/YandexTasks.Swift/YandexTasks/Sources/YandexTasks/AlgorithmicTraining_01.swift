@@ -8,6 +8,68 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_J(_ a: Double, _ b: Double, _ c: Double, _ d: Double, _ e: Double, _ f: Double) -> String {
+        
+        let determinant = a * d - b * c
+        var koef = 0.0
+        var a = a, b = b, c = c, d = d, e = e, f = f
+        
+        if determinant == 0 {
+            if a == 0, c == 0 {
+                if b == 0, d == 0 {
+                    if e == 0, f == 0 { return "5" }
+                    
+                    return "0"
+                }
+                if e * d != f * b { return "0" }
+                else {
+                    if b != 0 { return "4 \(String(format: "%.5f", e / b))" }
+                    else { return "4 \(String(format: "%.5f", f / d))" }
+                }
+            }
+            
+            if b == 0, d == 0 {
+                if e * c != f * a { return "0" }
+                else {
+                    if a != 0 { return "3 \(String(format: "%.5f", e / a))" }
+                    else { return "3 \(String(format: "%.5f", f / c))" }
+                }
+            }
+            
+            if a != 0 {
+                koef = c / a
+                c = 0
+                d -= koef * b
+                f -= koef * e
+                
+                if d == 0, f == 0 {
+                    return "1 \(String(format: "%.5f", -a / b)) \(String(format: "%.5f", e / b))"
+                }
+            } else {
+                koef = a / c
+                a = 0
+                b -= koef * d
+                e -= koef * f
+                
+                if b == 0, e == 0 {
+                    return "1 \(String(format: "%.5f", -c / d)) \(String(format: "%.5f", f / d))"
+                }
+            }
+            return "0"
+            
+        } else {
+            if d != 0 {
+                let x = (e - b * f / d) / (a - b * c / d)
+                let y = (f - c * x) / d
+                return "2 \(String(format: "%.5f", x)) \(String(format: "%.5f", y))"
+            } else {
+                let x = (f - d * e / b) / (c - d * a / b)
+                let y = (e - a * x) / b
+                return "2 \(String(format: "%.5f", x)) \(String(format: "%.5f", y))"
+            }
+        }
+    }
+    
     func problem_I(_ a: Int, _ b: Int, _ c: Int, _ d: Int, _ e: Int) -> String {
         let holeSizes = [d, e].sorted()
         let brickSizes = [a, b, c].sorted()
@@ -196,14 +258,15 @@ class AlgorithmicTraining_01 {
     }
 }
 
-//let a = Int(readLine()!)!
-//let b = Int(readLine()!)!
-//let c = Int(readLine()!)!
-//let d = Int(readLine()!)!
-//let e = Int(readLine()!)!
-//
-//let solution = AlgorithmicTraining_01()
-//let result = solution.problem_I(a, b, c, d, e)
-//
-//print("\(result)")
+let a = Double(readLine()!)!
+let b = Double(readLine()!)!
+let c = Double(readLine()!)!
+let d = Double(readLine()!)!
+let e = Double(readLine()!)!
+let f = Double(readLine()!)!
+
+let solution = AlgorithmicTraining_01()
+let result = solution.problem_J(a, b, c, d, e, f)
+
+print("\(result)")
 
