@@ -8,6 +8,25 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_F(_ line: String) -> [Int] {
+        let sizes = line.split(separator: " ").map({ Int($0)! })
+        let l1 = (min: min(sizes[0], sizes[1]), max: max(sizes[0], sizes[1]))
+        let l2 = (min: min(sizes[2], sizes[3]), max: max(sizes[2], sizes[3]))
+
+        var result = (a: Int.max, b: Int.max, area: Int.max)
+        result.a = max(l1.max, l2.max)
+        result.b = l1.max + l2.max - result.a
+        
+        if result.b <= max(l1.min, l2.min) {
+            result.a += min(min(l1.min, l2.min), result.b)
+            result.b = max(l1.min, l2.min)
+        } else {
+            result.b = l1.min + l2.min
+        }
+        
+        return [result.a, result.b]
+    }
+    
     func problem_E(_ line1: String) -> [Int] {
         let args = line1.split(separator: " ")
         let h = (k1: Int(args[0])!,
@@ -136,11 +155,10 @@ class AlgorithmicTraining_01 {
     }
 }
 
-//var line1 = readLine()!
+//var line = readLine()!
 //
 //let solution = AlgorithmicTraining_01()
-//let result = solution.problem_E(line1)
+//let result = solution.problem_F(line)
 //
-
 //print("\(result[0]) \(result[1])")
 
