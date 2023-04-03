@@ -8,6 +8,17 @@
 import Foundation
 
 class AlgorithmicTraining_01 {
+    func problem_H(_ a: Int, _ b: Int, _ n: Int, _ m: Int) -> [Int] {
+        let platform1 = (min: (1 + a) * n - a, max: (1 + a) * n + a)
+        let platform2 = (min: (1 + b) * m - b, max: (1 + b) * m + b)
+        
+        if platform1.max < platform2.min || platform1.min > platform2.max { return [-1] }
+        let minX = max(platform1.min, platform2.min)
+        let maxX = min(platform1.max, platform2.max)
+        
+        return [minX, maxX].sorted()
+    }
+    
     func problem_G(_ line: String) -> Int {
         let args = line.split(separator: " ").map({ Int($0)! })
         guard args[0] >= args[1], args[1] >= args[2] else { return 0 }
@@ -174,10 +185,13 @@ class AlgorithmicTraining_01 {
     }
 }
 
-//var line = readLine()!
+//var a = Int(readLine()!)!
+//var b = Int(readLine()!)!
+//var n = Int(readLine()!)!
+//var m = Int(readLine()!)!
 //
 //let solution = AlgorithmicTraining_01()
-//let result = solution.problem_G(line)
+//let result = solution.problem_H(a, b, n, m)
 //
-//print("\(result)")
+//result.count == 1 ? print("\(result[0])") : print("\(result[0]) \(result[1])")
 
