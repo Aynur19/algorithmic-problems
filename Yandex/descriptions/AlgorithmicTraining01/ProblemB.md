@@ -1,17 +1,22 @@
-[⬅️ MAIN][main]
+[⬅️ MAIN][main]<br>[⬅️ Yandex][Yandex]  
 
-[⬅️ Yandex][Yandex]  
+[main]: ./../../../README.md
+[Yandex]: ./../../README.md
+[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
+[Yandex_AT_01_B]: https://contest.yandex.ru/contest/27393/problems/B/
 
-# Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1
 
-## B. Треугольник
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
+## [B. Треугольник][Yandex_AT_01_B]
+
 
 |||
-|-----------------------|-----------------------------------|
-|Ограничение времени    |1 секунда                          |
-|Ограничение памяти     |64 Mb                              |
-|Ввод                   |стандартный ввод или input.txt     |
-|Вывод                  |стандартный вывод или output.txt   |
+|--------------------|---------------------------------|
+|Ограничение времени |1 секунда                        |
+|Ограничение памяти  |64 Mb                            |
+|Ввод                |стандартный ввод или input.txt   |
+|Вывод               |стандартный вывод или output.txt |
+|||
 
 
 Даны три натуральных числа. Возможно ли построить треугольник с такими сторонами. Если это возможно, выведите строку ***YES***, иначе выведите строку ***NO***.
@@ -19,6 +24,7 @@
 Треугольник — это три точки, не лежащие на одной прямой.
 
 
+---
 ### Формат ввода
 Вводятся три натуральных числа.
 
@@ -27,6 +33,7 @@
 Выведите ответ на задачу.
 
 
+---
 ### Примеры
 |       |Пример 1 |Пример 2 |Пример 3 |
 |-------|---------|---------|---------|
@@ -36,7 +43,11 @@
 |Вывод  |YES      |YES      |YES      |
 
 
+---
 ### Решение (Swift)
+[AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
+
+[AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift
 
 1. [AlgorithmicTraining_01.swift][AlgorithmicTraining_01]
 2. [AlgorithmicTraining_01_Tests.swift][AlgorithmicTraining_01_Tests]
@@ -60,10 +71,5 @@ var result = solutions.problem_B(line1, line2, line3)
 print(result)
 ```
 
+
 ---
-[main]: ./../../../README.md
-[Yandex]: ./../../README.md
-
-[AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
-
-[AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift

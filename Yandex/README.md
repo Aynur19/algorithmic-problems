@@ -12,7 +12,7 @@
 3. [C. Телефонные номера][Yandex_AT_01_C]
 4. [D. Уравнение с корнем][Yandex_AT_01_D]
 5. [E. Скорая помощь][Yandex_AT_01_E]
-6. [E. Расстановка ноутбуков][Yandex_AT_01_F]
+6. [F. Расстановка ноутбуков][Yandex_AT_01_F]
 
 [Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
 [Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md

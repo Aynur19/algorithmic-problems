@@ -1,24 +1,29 @@
-[⬅️ MAIN][main]
+[⬅️ MAIN][main]<br>[⬅️ Yandex][Yandex]  
 
-[⬅️ Yandex][Yandex]  
+[main]: ./../../../README.md
+[Yandex]: ./../../README.md
+[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
+[Yandex_AT_01_D]: https://contest.yandex.ru/contest/27393/problems/D/
 
-# Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
+## [D. Уравнение с корнем][Yandex_AT_01_D]
 
-## D. Уравнение с корнем
 
 |||
-|--------------------|----------------------------------|
-|Ограничение времени |1 секунда                         |
-|Ограничение памяти  |64 Mb                             |
-|Ввод                |стандартный ввод или input.txt    |
-|Вывод               |стандартный вывод или output.txt  |
+|--------------------|---------------------------------|
+|Ограничение времени |1 секунда                        |
+|Ограничение памяти  |64 Mb                            |
+|Ввод                |стандартный ввод или input.txt   |
+|Вывод               |стандартный вывод или output.txt |
+|||
 
 
-Решите в целых числах уравнение: ${\sqrt{ax+b}}=c$,
+Решите в целых числах уравнение: ${\sqrt{ax+b}=c}$,
 
 ${a, b, c}$ – данные целые числа: найдите все решения или сообщите, что решений в целых числах нет.
 
 
+---
 ### Формат ввода
 Вводятся три числа ${a, b}$ и ${c}$ по одному в строке.
 
@@ -27,6 +32,7 @@ ${a, b, c}$ – данные целые числа: найдите все реш
 Программа должна вывести все решения уравнения в порядке возрастания, либо **NO SOLUTION** (заглавными буквами), если решений нет. Если решений бесконечно много, вывести **MANY SOLUTIONS**.
 
 
+---
 ### Примеры
 |           |Пример 1 |Пример 2 |Пример 3        |
 |-----------|---------|---------|----------------|
@@ -36,7 +42,11 @@ ${a, b, c}$ – данные целые числа: найдите все реш
 |Вывод      |0        |7        |**NO SOLUTION** |
 
 
+---
 ### Решение (Swift)
+[AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
+
+[AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift
 
 1. [AlgorithmicTraining_01.swift][AlgorithmicTraining_01]
 2. [AlgorithmicTraining_01_Tests.swift][AlgorithmicTraining_01_Tests]
@@ -82,10 +92,5 @@ for i in 0..<result.count {
 }
 ```
 
+
 ---
-[main]: ./../../../README.md
-[Yandex]: ./../../README.md
-
-[AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
-
-[AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift

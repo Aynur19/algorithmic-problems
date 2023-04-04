@@ -2,9 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
+[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
+[Yandex_AT_01_F]: https://contest.yandex.ru/contest/27393/problems/F/
 
-# Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1
-## E. Расстановка ноутбуков
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
+## [E. Расстановка ноутбуков][Yandex_AT_01_F]
 
 |||
 |--------------------|----------------------------------|
@@ -25,6 +27,7 @@
 ### Формат вывода
 Выведите два числа — размеры стола. Если возможно несколько ответов, выведите любой из них (но только один).
 
+
 ---
 ### Примеры
 |         |Ввод      |Вывод                              |
@@ -40,7 +43,6 @@
 ---
 ### Решение (Swift)
 [AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
-
 [AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift
 
 1. [AlgorithmicTraining_01.swift][AlgorithmicTraining_01]
@@ -78,6 +80,5 @@ let result = solution.problem_F(line)
 print("\(result[0]) \(result[1])")
 ```
 
+
 ---
-
-
