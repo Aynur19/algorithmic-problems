@@ -40,10 +40,6 @@
 |Вывод      |YES        |NO         |
 
 
-### Примечания
-В первом примере по первому пути поезда ходят через 1 минуту. По второму — через 3. Стоя на платформе 5, 6 или 7 минут, Таня могла насчитать 3 поезда на первом пути и 2 на втором.
-
-
 ---
 ### Решение (Swift)
 [AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
