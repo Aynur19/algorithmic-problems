@@ -54,11 +54,11 @@ ${cx+dy=f}$
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01.swift
-[AlgorithmicTraining_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_Tests.swift
+[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
+[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
 
-1. [AlgorithmicTraining_01.swift][AlgorithmicTraining_01]
-2. [AlgorithmicTraining_01_Tests.swift][AlgorithmicTraining_01_Tests]
+1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
+2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
 
 ```swift
 import Foundation

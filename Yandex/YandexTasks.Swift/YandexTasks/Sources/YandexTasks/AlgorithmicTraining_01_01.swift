@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgorithmicTraining_01 {
+class AlgorithmicTraining_01_01 {
     func problem_J(_ a: Double, _ b: Double, _ c: Double, _ d: Double, _ e: Double, _ f: Double) -> String {
         
         let determinant = a * d - b * c
@@ -258,15 +258,15 @@ class AlgorithmicTraining_01 {
     }
 }
 
-let a = Double(readLine()!)!
-let b = Double(readLine()!)!
-let c = Double(readLine()!)!
-let d = Double(readLine()!)!
-let e = Double(readLine()!)!
-let f = Double(readLine()!)!
-
-let solution = AlgorithmicTraining_01()
-let result = solution.problem_J(a, b, c, d, e, f)
-
-print("\(result)")
+//let a = Double(readLine()!)!
+//let b = Double(readLine()!)!
+//let c = Double(readLine()!)!
+//let d = Double(readLine()!)!
+//let e = Double(readLine()!)!
+//let f = Double(readLine()!)!
+//
+//let solution = AlgorithmicTraining_01()
+//let result = solution.problem_J(a, b, c, d, e, f)
+//
+//print("\(result)")
 

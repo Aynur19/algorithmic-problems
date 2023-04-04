@@ -8,13 +8,13 @@
 import XCTest
 @testable import YandexTasks
 
-final class AlgorithmicTraining_01_Tests: XCTestCase {
-    public var task: AlgorithmicTraining_01!
+final class AlgorithmicTraining_01_01_Tests: XCTestCase {
+    public var task: AlgorithmicTraining_01_01!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        task = AlgorithmicTraining_01()
+        task = AlgorithmicTraining_01_01()
     }
     
     override func tearDownWithError() throws {
@@ -23,11 +23,11 @@ final class AlgorithmicTraining_01_Tests: XCTestCase {
     }
 }
 
-extension AlgorithmicTraining_01_Tests {
+extension AlgorithmicTraining_01_01_Tests {
     func test_problem_J() throws {
-        XCTAssertEqual(task.problem_J(1, 0, 0, 1, 3, 3), "2 3 3")
-        XCTAssertEqual(task.problem_J(1, 1, 2, 2, 1, 2), "1 -1 1")
-        XCTAssertEqual(task.problem_J(0, 2, 0, 4, 1, 2), "4 0.5")
+        XCTAssertEqual(task.problem_J(1, 0, 0, 1, 3, 3), "2 3.00000 3.00000")
+        XCTAssertEqual(task.problem_J(1, 1, 2, 2, 1, 2), "1 -1.00000 1.00000")
+        XCTAssertEqual(task.problem_J(0, 2, 0, 4, 1, 2), "4 0.50000")
     }
     
     func test_problem_I() throws {
