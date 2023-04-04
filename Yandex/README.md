@@ -13,6 +13,10 @@
 4. [D. Уравнение с корнем][Yandex_AT_01_D]
 5. [E. Скорая помощь][Yandex_AT_01_E]
 6. [F. Расстановка ноутбуков][Yandex_AT_01_F]
+6. [G. Детали][Yandex_AT_01_G]
+6. [H. Метро][Yandex_AT_01_H]
+6. [I. Узник замка Иф][Yandex_AT_01_I]
+6. [J. Система линейных уравнений - 2][Yandex_AT_01_J]
 
 [Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
 [Yandex_AT_01_A]: ./descriptions/AlgorithmicTraining01/ProblemA.md
@@ -21,6 +25,10 @@
 [Yandex_AT_01_D]: ./descriptions/AlgorithmicTraining01/ProblemD.md
 [Yandex_AT_01_E]: ./descriptions/AlgorithmicTraining01/ProblemE.md
 [Yandex_AT_01_F]: ./descriptions/AlgorithmicTraining01/ProblemF.md
+[Yandex_AT_01_G]: ./descriptions/AlgorithmicTraining01/ProblemG.md
+[Yandex_AT_01_H]: ./descriptions/AlgorithmicTraining01/ProblemH.md
+[Yandex_AT_01_I]: ./descriptions/AlgorithmicTraining01/ProblemI.md
+[Yandex_AT_01_J]: ./descriptions/AlgorithmicTraining01/ProblemJ.md
 
 
 ---
