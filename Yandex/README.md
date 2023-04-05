@@ -37,7 +37,7 @@
 1. [A. Возрастает ли список?][Yandex_AT_01_02A]
 2. [B. Определить вид последовательности][Yandex_AT_01_02B]
 3. [C. Ближайшее число][Yandex_AT_01_02C]
-4. [D. Уравнение с корнем][Yandex_AT_01_01D]
+4. [D. Больше своих соседей][Yandex_AT_01_02D]
 5. [E. Скорая помощь][Yandex_AT_01_01E]
 6. [F. Расстановка ноутбуков][Yandex_AT_01_01F]
 6. [G. Детали][Yandex_AT_01_01G]
@@ -49,7 +49,7 @@
 [Yandex_AT_01_02A]: ./descriptions/AlgorithmicTraining01_02/ProblemA.md
 [Yandex_AT_01_02B]: ./descriptions/AlgorithmicTraining01_02/ProblemB.md
 [Yandex_AT_01_02C]: ./descriptions/AlgorithmicTraining01_02/ProblemC.md
-[Yandex_AT_01_01D]: ./descriptions/AlgorithmicTraining01_01/ProblemD.md
+[Yandex_AT_01_02D]: ./descriptions/AlgorithmicTraining01_02/ProblemD.md
 [Yandex_AT_01_01E]: ./descriptions/AlgorithmicTraining01_01/ProblemE.md
 [Yandex_AT_01_01F]: ./descriptions/AlgorithmicTraining01_01/ProblemF.md
 [Yandex_AT_01_01G]: ./descriptions/AlgorithmicTraining01_01/ProblemG.md
