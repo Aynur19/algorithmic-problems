@@ -8,6 +8,24 @@
 import Foundation
 
 class AlgorithmicTraining_01_02 {
+    func problem_D(_ line: String) -> Int {
+        let nums = line.split(separator: " ").map({ Int($0)! })
+        guard nums.count > 2 else { return 0 }
+        
+        var count = 0
+        var i = 1
+        while i < nums.count - 1 {
+            if nums[i] > nums[i - 1] && nums[i] > nums[i + 1] {
+                count += 1
+                i += 2
+            } else {
+                i += 1
+            }
+        }
+        
+        return count
+    }
+    
     func problem_C(_ n: Int, _ numbers: String, _ target: Int) -> Int {
         let nums = numbers.split(separator: " ").map({ Int($0)! })
         var dif = Int.max, idx = 0

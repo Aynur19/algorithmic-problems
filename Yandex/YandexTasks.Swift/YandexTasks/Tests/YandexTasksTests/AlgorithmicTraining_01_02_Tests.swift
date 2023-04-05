@@ -43,6 +43,17 @@ extension AlgorithmicTraining_01_02_Tests {
     }
     
     func test_problem_D() throws {
+        XCTAssertEqual(task.problem_D("1 2 3 4 5"), 0)
+        XCTAssertEqual(task.problem_D("5 4 3 2 1"), 0)
+        XCTAssertEqual(task.problem_D("1 5 1 5 1"), 2)
+        XCTAssertEqual(task.problem_D("1 5 7 5 1"), 1)
+        XCTAssertEqual(task.problem_D("19 15 7 15 19"), 0)
+        XCTAssertEqual(task.problem_D("19 15 17 15 19"), 1)
+        XCTAssertEqual(task.problem_D(""), 0)
+        XCTAssertEqual(task.problem_D("19"), 0)
+        XCTAssertEqual(task.problem_D("19 15"), 0)
+        XCTAssertEqual(task.problem_D("19 15 17"), 0)
+        XCTAssertEqual(task.problem_D("15 15 15"), 0)
     }
     
     func test_problem_C() throws {
