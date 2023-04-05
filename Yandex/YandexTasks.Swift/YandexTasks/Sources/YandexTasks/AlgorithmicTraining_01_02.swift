@@ -8,6 +8,18 @@
 import Foundation
 
 class AlgorithmicTraining_01_02 {
+    func problem_C(_ n: Int, _ numbers: String, _ target: Int) -> Int {
+        let nums = numbers.split(separator: " ").map({ Int($0)! })
+        var dif = Int.max, idx = 0
+        
+        for i in 0..<nums.count where dif > abs(target - nums[i]) && dif > 0 {
+            dif = abs(target - nums[i])
+            idx = i
+        }
+    
+        return nums[idx]
+    }
+    
     func problem_B(_ list: [Int]) -> String {
         let end = -2_000_000_000
         var result = Set<String>()
@@ -45,4 +57,3 @@ class AlgorithmicTraining_01_02 {
         return "YES"
     }
 }
-
