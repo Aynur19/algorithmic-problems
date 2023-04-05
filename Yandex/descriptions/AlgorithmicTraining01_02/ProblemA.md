@@ -2,11 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_A]: https://contest.yandex.ru/contest/27393/problems/A/
+[Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
+[Yandex_AT_01_02_A]: https://contest.yandex.ru/contest/27472/problems/A/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
-## [A. Кондиционер][Yandex_AT_01_A]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 2][Yandex_AT_01_02_orig]
+## [A. Возрастает ли список?][Yandex_AT_01_02_A]
 
 |||
 |--------------------|---------------------------------|
@@ -16,72 +16,44 @@
 |Вывод               |стандартный вывод или output.txt |
 |||
 
-В офисе, где работает программист Петр, установили кондиционер нового типа. Этот кондиционер отличается особой простотой в управлении. У кондиционера есть всего лишь два управляемых параметра: желаемая температура и режим работы.
+Дан список. Определите, является ли он монотонно возрастающим(то есть верно ли, что каждый элемент этого списка больше предыдущего).
 
-Кондиционер может работать в следующих четырех режимах:
-
-- ***«freeze»*** — охлаждение. В этом режиме кондиционер может только уменьшать температуру. Если температура в комнате и так не больше желаемой, то он выключается.
-- ***«heat»*** — нагрев. В этом режиме кондиционер может только увеличивать температуру. Если температура в комнате и так не меньше желаемой, то он выключается.
-- ***«auto»*** — автоматический режим. В этом режиме кондиционер может как увеличивать, так и уменьшать температуру в комнате до желаемой.
-- ***«fan»*** — вентиляция. В этом режиме кондиционер осуществляет только вентиляцию воздуха и не изменяет температуру в комнате.
-
-Кондиционер достаточно мощный, поэтому при настройке на правильный режим работы он за час доводит температуру в комнате до желаемой.
-
-Требуется написать программу, которая по заданной температуре в комнате ${t_{room}}$, установленным на кондиционере желаемой температуре ${t_{cond}}$ и режиму работы определяет температуру, которая установится в комнате через час.
+Выведите ***YES***, если массив монотонно возрастает и ***NO*** в противном случае.
 
 
 ---
-### Формат ввода
-Первая строка входного файла содержит два целых числа troom, и tcond, разделенных ровно одним пробелом ${(–50 ≤ t_{room} ≤ 50, –50 ≤ t_{cond} ≤ 50)}$.
-
-
-### Формат вывода
-Выходной файл должен содержать одно целое число — температуру, которая установится в комнате через час.
-
-
----
-### Пример
-|                  |Пример 1 |Пример 2 |
-|------------------|---------|---------|
-|Ввод ${t_{room}}$ |10 20    |10 20    |
-|Ввод ${t_{cond}}$ |heat     |freeze   |
-|Вывод             |20       |10       |
-
-
-### Примечания
-В первом примере кондиционер находится в режиме нагрева. Через час он нагреет комнату до желаемой температуры в 20 градусов.
-
-Во втором примере кондиционер находится в режиме охлаждения. Поскольку температура в комнате ниже, чем желаемая, кондиционер самостоятельно выключается и температура в комнате не поменяется.
+### Примеры
+|           |Ввод   |Вывод  |
+|-----------|-------|-------|
+|Пример 1   |1 7 9  |YES    |
+|Пример 2   |1 9 7  |NO     |
+|Пример 3   |2 2 2  |NO     |
 
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
-[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
+[AlgorithmicTraining_01_02]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_02.swift
+[AlgorithmicTraining_01_02_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_02_Tests.swift
 
-1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
-2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
+1. [AlgorithmicTraining_01_02.swift][AlgorithmicTraining_01_02]
+2. [AlgorithmicTraining_01_02_Tests.swift][AlgorithmicTraining_01_02_Tests]
 
 ```swift
-class AlgorithmicTraining_01 {
-    func problem_A(_ line1: String, _ line2: String) -> Int {
-        let args = line1.split(separator: " ").map({Int($0)!})
-        let temp = (room: args[0], cond: args[1])
-        
-        switch line2 {
-        case "freeze": return min(temp.room, temp.cond)
-        case "heat": return max(temp.room, temp.cond)
-        case "auto": return temp.cond
-        default: return temp.room
+import Foundation
+
+class AlgorithmicTraining_01_02 {
+    func problem_A(_ list: [Int]) -> String {
+        for i in 0..<list.count - 1 where list[i] >= list[i + 1] {
+            return "NO"
         }
+        
+        return "YES"
     }
 }
 
-var line1 = readLine()!
-var line2 = readLine()!
-
-var solutions = AlgorithmicTraining_01()
-var result = solutions.problem_A(line1, line2)
+let solution = AlgorithmicTraining_01_02()
+let list = readLine()!.split(separator: " ").map({ Int($0)! })
+let result = solution.problem_A(list)
 
 print(result)
 ```

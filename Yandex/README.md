@@ -34,7 +34,7 @@
 ---
 ## [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 2][Yandex_AT_01_02_orig] 
 Решения задач:
-1. [A. Кондиционер][Yandex_AT_01_01A]
+1. [A. Возрастает ли список?][Yandex_AT_01_02A]
 2. [B. Определить вид последовательности][Yandex_AT_01_02B]
 3. [C. Телефонные номера][Yandex_AT_01_01C]
 4. [D. Уравнение с корнем][Yandex_AT_01_01D]
@@ -46,7 +46,7 @@
 6. [J. Система линейных уравнений - 2][Yandex_AT_01_01J]
 
 [Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
-[Yandex_AT_01_01A]: ./descriptions/AlgorithmicTraining01_01/ProblemA.md
+[Yandex_AT_01_02A]: ./descriptions/AlgorithmicTraining01_02/ProblemA.md
 [Yandex_AT_01_02B]: ./descriptions/AlgorithmicTraining01_02/ProblemB.md
 [Yandex_AT_01_01C]: ./descriptions/AlgorithmicTraining01_01/ProblemC.md
 [Yandex_AT_01_01D]: ./descriptions/AlgorithmicTraining01_01/ProblemD.md
