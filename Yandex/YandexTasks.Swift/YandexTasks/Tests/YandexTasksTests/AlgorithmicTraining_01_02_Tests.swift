@@ -49,6 +49,20 @@ extension AlgorithmicTraining_01_02_Tests {
     }
     
     func test_problem_B() throws {
+        XCTAssertEqual(task.problem_B([-530, -530, -530, -530, -530, -530,
+                                      -2000000000]), "CONSTANT")
+        XCTAssertEqual(task.problem_B([-530, -530, 530, -530, -530, -530,
+                                      -2000000000]), "RANDOM")
+        XCTAssertEqual(task.problem_B([-530, -530, 530, 530, 530, 530,
+                                      -2000000000]), "WEAKLY ASCENDING")
+        
+        XCTAssertEqual(task.problem_B([-530, -2000000000]), "CONSTANT")
+        XCTAssertEqual(task.problem_B([-530, 530, -2000000000]), "ASCENDING")
+        XCTAssertEqual(task.problem_B([530, -530, -2000000000]), "DESCENDING")
+        
+        XCTAssertEqual(task.problem_B([-530, 530, 530, -2000000000]), "WEAKLY ASCENDING")
+        XCTAssertEqual(task.problem_B([530, 530, -530, -2000000000]), "WEAKLY DESCENDING")
+        XCTAssertEqual(task.problem_B([-2000000000]), "RANDOM")
     }
     
     func test_problem_A() throws {
