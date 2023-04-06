@@ -2,11 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_E]: https://contest.yandex.ru/contest/27393/problems/E/
+[Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
+[Yandex_AT_01_02_E]: https://contest.yandex.ru/contest/27472/problems/E/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
-## [E. Скорая помощь][Yandex_AT_01_E]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_02_orig]
+## [E. Чемпионат по метанию коровьих лепешек][Yandex_AT_01_02_E]
 
 |||
 |--------------------|----------------------------------|
@@ -17,103 +17,91 @@
 |||
 
 
-Бригада скорой помощи выехала по вызову в один из отделенных районов. К сожалению, когда диспетчер получил вызов, он успел записать только адрес дома и номер квартиры ${K_1}$, а затем связь прервалась. Однако он вспомнил, что по этому же адресу дома некоторое время назад скорая помощь выезжала в квартиру ${K_2}$, которая расположена в подъезда ${P_2}$ на этаже ${N_2}$. Известно, что в доме ${M}$ этажей и количество квартир на каждой лестничной площадке одинаково. Напишите программу, которая вычилсяет номер подъезда ${P_1}$ и номер этажа ${N_1}$ квартиры ${K_1}$.
+Ежегодный турнир ***"Веселый коровяк"*** — по метанию коровьих лепешек на дальность — *прошел 8–9 июля в селе Крылово Осинского района Пермского края*.
+
+Участники соревнований кидают ***«снаряд»*** — спрессованный навоз, выбирая его из заранее заготовленной кучи. Желающих поупражняться в силе броска традиционно очень много — как мужчин, так и женщин. Каждую лепешку, которую метнули участники ***«Веселого коровяка»***, внимательно осматривали женщины в костюмах коров и тщательно замеряли расстояние.
+
+Соревнования по метанию коровьих лепешек проводятся в Пермском крае с 2009 года.
+
+К сожалению, после чемпионата потерялись записи с фамилиями участников, остались только записи о длине броска в том порядке, в котором их совершали участники.
+
+Трактиорист ***Василий*** помнит три факта:
+1. Число метров, на которое он метнул лепешку, оканчивалось на 5
+2. Один из победителей чемпионата метал лепешку до Василия
+3. Участник, метавший лепешку сразу после Василия, метнул ее на меньшее количество метров
+
+Будем считать, что участник соревнования занял ${k}$-е место, если ровно ${(k − 1)}$ участников чемпионата метнули лепешку строго дальше, чем он.
+
+Какое максимально высокое место мог занять Василий?
 
 
 ---
 ### Формат ввода
-Во входном файле записаны пять положительных целых чисел ${K_1, M, K_2, P_2, N_2}$. Все числа не превосходят ${10^6}$.
+Первая строка входного файла содержит целое число ${n}$ — количество участников чемпионата по метанию лепешек ${(3 ≤ n ≤ 10^5)}$.
+
+Вторая строка входного файла содержит n положительных целых чисел, каждое из которых не превышает 1000, — дальность броска участников чемпионата, приведенные в том порядке, в котором происходило метание.
 
 
 ### Формат вывода
-Выведите два числа ${P_1}$ и ${N_1}$. Если входные данные не позволяют однозначно определить ${P_1}$ или ${N_1}$, вместо соответствующего числа напечатайте 0. Если входные данные противоречивы, напечатайте два числа –1 (минус один).
+Выведите самое высокое место, которое мог занять тракторист Василий. Если не существует ни одного участника чемпионата, который удовлетворяет, описанным выше условиям, выведите число 0.
 
 
 ---
 ### Примеры
-|         |Ввод ${K_1, M, K_2, P_2, N_2}$ |Вывод ${P_1, N_1}$ |
-|---------|-------------------------------|-------------------|
-|Пример 1 |89 20 41 1 11                  |2 3                |
-|Пример 2 |11 1 1 1 1                     |0 1                |
-|Пример 3 |3 2 2 2 1                      |-1 -1              |
+|           |Пример 1           |Пример 2   |Пример 3   |
+|-----------|-------------------|-----------|-----------|
+|Ввод ${n}$ |7                  |6          |3          |
+|Ввод       |10 20 15 10 30 5 1 |15 15 10   |10 15 20   |
+|Вывод      |6                  |1          |0          |
 
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
-[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
+[AlgorithmicTraining_01_02]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_02.swift
+[AlgorithmicTraining_01_02_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_02_Tests.swift
 
-1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
-2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
+1. [AlgorithmicTraining_01_02.swift][AlgorithmicTraining_01_02]
+2. [AlgorithmicTraining_01_02_Tests.swift][AlgorithmicTraining_01_02_Tests]
 
 ```swift
 import Foundation
 
-class AlgorithmicTraining_01 {
-    func problem_E(_ line1: String) -> [Int] {
-        let args = line1.split(separator: " ")
-        let h = (k1: Int(args[0])!,
-                 m: Int(args[1])!,
-                 k2: Int(args[2])!, p2: Int(args[3])!, n2: Int(args[4])!)
+let n = Int(readLine()!)!
+let line = readLine()!
+
+let solution = AlgorithmicTraining_01_02()
+let result = solution.problem_E(n, line)
+
+print("\(result)")
+
+class AlgorithmicTraining_01_02 {
+    func problem_E(_ n: Int, _ line: String) -> Int {
+        var distances = line.split(separator: " ").map({ Int($0)! })
+        var winner = distances[0]
+        var result = 0
+        var tmp = 0
         
-        guard h.k1 > 0 && h.m > 0 && h.k2 > 0 && h.p2 > 0 && h.n2 > 0 else { return [-1, -1] }
-        guard h.n2 <= h.m && h.n2 <= h.k2 && h.p2 <= h.k2 else { return [-1, -1] }
-        if h.k2 == 1 && (h.n2 != 1 || h.p2 != 1)  { return [-1, -1] }
-        
-        var result = (p1: -1, n1: -1)
-        
-        let n2 = (h.p2 - 1) * h.m + h.n2
-        if n2 > h.k2 { return [-1, -1] }
-                
-        let apartmetsPerFloor = h.k2 / n2 + (h.k2 % n2 == 0 ? 0 : 1)
-        if apartmetsPerFloor * (n2 - 1) > h.k2 { return [-1, -1] }
-        
-        if n2 == 1 {
-            if h.k1 <= h.k2 { return [1, 1] }
-            else if h.k1 <= h.m * h.k2 {
-                return h.m == 1 ? [1, 1] : [1, 0]
+        for i in 1..<distances.count - 1 {
+            tmp = distances[i]
+            if tmp > winner {
+                winner = tmp
+                result = 0
             }
-            else {
-                return h.m == 1 ? [0, 1] : [0, 0]
-                
+            else if tmp % 10 == 5 && tmp > result && tmp > distances[i + 1] {
+                result = tmp
             }
         }
         
-        let apartmetsPerFloor2 = (h.k2 - 1) / (n2 - 1)
-        let bounds = (l: min(apartmetsPerFloor, apartmetsPerFloor2),
-                      r: max(apartmetsPerFloor, apartmetsPerFloor2))
-        
-        for apf in bounds.l...bounds.r {
-            var n1 = h.k1 / apf + (h.k1 % apf == 0 ? 0 : 1)
-            let p1 = n1 / h.m + (n1 % h.m == 0 ? 0 : 1)
-            n1 = n1 - (p1 - 1) * h.m
-            
-            if result.n1 == -1 {
-                result.n1 = n1
-            } else if result.n1 != n1 {
-                result.n1 = 0
-            }
-            
-            if result.p1 == -1 {
-                result.p1 = p1
-            } else if result.p1 != p1 {
-                result.p1 = 0
-            }
-            
-            if result.n1 == 0 && result.p1 == 0 { break }
+        if winner < distances[n - 1] || result == 0 { return 0 } 
+        else {
+            distances.sort(by: >)
+            for i in 0..<distances.count - 1
+            where distances[i] == result { return i + 1 }
         }
-                
-        return [result.p1, result.n1]
+        
+        return 0
     }
-    
 }
-
-var line1 = readLine()!
-
-let solution = AlgorithmicTraining_01()
-let result = solution.problem_E(line1)
-
-print("\(result[0]) \(result[1])")
 ```
 
 
