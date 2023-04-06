@@ -7,7 +7,42 @@
 
 import Foundation
 
+//let n = Int(readLine()!)!
+//let line = readLine()!
+//
+//let solution = AlgorithmicTraining_01_02()
+//let result = solution.problem_E(n, line)
+//
+//print("\(result)")
+
 class AlgorithmicTraining_01_02 {
+    func problem_E(_ n: Int, _ line: String) -> Int {
+        var distances = line.split(separator: " ").map({ Int($0)! })
+        var winner = distances[0]
+        var result = 0
+        var tmp = 0
+        
+        for i in 1..<distances.count - 1 {
+            tmp = distances[i]
+            if tmp > winner {
+                winner = tmp
+                result = 0
+            }
+            else if tmp % 10 == 5 && tmp > result && tmp > distances[i + 1] {
+                result = tmp
+            }
+        }
+        
+        if winner < distances[n - 1] || result == 0 { return 0 }
+        else {
+            distances.sort(by: >)
+            for i in 0..<distances.count - 1
+            where distances[i] == result { return i + 1 }
+        }
+        
+        return 0
+    }
+    
     func problem_D(_ line: String) -> Int {
         let nums = line.split(separator: " ").map({ Int($0)! })
         guard nums.count > 2 else { return 0 }

@@ -38,7 +38,7 @@
 2. [B. Определить вид последовательности][Yandex_AT_01_02B]
 3. [C. Ближайшее число][Yandex_AT_01_02C]
 4. [D. Больше своих соседей][Yandex_AT_01_02D]
-5. [E. Скорая помощь][Yandex_AT_01_01E]
+5. [E. Чемпионат по метанию коровьих лепешек][Yandex_AT_01_02E]
 6. [F. Расстановка ноутбуков][Yandex_AT_01_01F]
 6. [G. Детали][Yandex_AT_01_01G]
 6. [H. Метро][Yandex_AT_01_01H]
@@ -50,7 +50,7 @@
 [Yandex_AT_01_02B]: ./descriptions/AlgorithmicTraining01_02/ProblemB.md
 [Yandex_AT_01_02C]: ./descriptions/AlgorithmicTraining01_02/ProblemC.md
 [Yandex_AT_01_02D]: ./descriptions/AlgorithmicTraining01_02/ProblemD.md
-[Yandex_AT_01_01E]: ./descriptions/AlgorithmicTraining01_01/ProblemE.md
+[Yandex_AT_01_02E]: ./descriptions/AlgorithmicTraining01_02/ProblemE.md
 [Yandex_AT_01_01F]: ./descriptions/AlgorithmicTraining01_01/ProblemF.md
 [Yandex_AT_01_01G]: ./descriptions/AlgorithmicTraining01_01/ProblemG.md
 [Yandex_AT_01_01H]: ./descriptions/AlgorithmicTraining01_01/ProblemH.md

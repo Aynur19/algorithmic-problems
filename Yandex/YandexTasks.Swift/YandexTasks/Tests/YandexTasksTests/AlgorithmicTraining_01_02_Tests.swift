@@ -40,6 +40,20 @@ extension AlgorithmicTraining_01_02_Tests {
     }
     
     func test_problem_E() throws {
+//        XCTAssertEqual(task.problem_E(7, "10 20 15 10 30 5 1"), 6)
+//        XCTAssertEqual(task.problem_E(3, "15 15 10"), 1)
+//        XCTAssertEqual(task.problem_E(3, "10 15 20"), 0)
+//        XCTAssertEqual(task.problem_E(3, "40 15 20"), 0)
+//        XCTAssertEqual(task.problem_E(3, "10 10 10"), 0)
+        XCTAssertEqual(task.problem_E(8, "15 55 15 45 25 75 55 45"), 2)
+        XCTAssertEqual(task.problem_E(3, "40 35 20"), 2)
+        XCTAssertEqual(task.problem_E(4, "10 15 15 10"), 1)
+        XCTAssertEqual(task.problem_E(4, "15 15 15 10"), 1)
+        XCTAssertEqual(task.problem_E(4, "20 15 15 10"), 2)
+        XCTAssertEqual(task.problem_E(4, "20 20 15 10"), 3)
+        XCTAssertEqual(task.problem_E(4, "20 20 155 15"), 0)
+        XCTAssertEqual(task.problem_E(4, "20 20 155 15"), 0)
+        XCTAssertEqual(task.problem_E(4, "20 20 155 155 6"), 1)
     }
     
     func test_problem_D() throws {
