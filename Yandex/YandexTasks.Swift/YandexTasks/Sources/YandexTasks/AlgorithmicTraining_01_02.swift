@@ -11,13 +11,42 @@ import Foundation
 //let nums = readLine()!.split(separator: " ").map({ Int($0)! })
 //
 //let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_F(n, nums)
+//let result = solution.problem_G(nums)
 //let resultStr = result.map({ String($0) }).joined(separator: " ")
-//
+
 //print("\(result.count)")
 //print(resultStr)
 
 class AlgorithmicTraining_01_02 {
+    func problem_G(_ nums: [Int]) -> [Int] {
+        var maxMax = max(nums[0], nums[1])
+        var maxMin = min(nums[0], nums[1])
+        
+        var minMin = maxMin, minMax = maxMax
+        
+        for i in 2..<nums.count {
+            if nums[i] >= maxMax {
+                maxMin = maxMax
+                maxMax = nums[i]
+            } else if nums[i] > maxMin {
+                maxMin = nums[i]
+            }
+            
+            if nums[i] <= minMin {
+                minMax = minMin
+                minMin = nums[i]
+            } else if nums[i] < minMax {
+                minMax = nums[i]
+            }
+        }
+        
+        if minMin * minMax > maxMax * maxMin {
+            return [minMin, minMax]
+        } else {
+            return [maxMin, maxMax]
+        }
+    }
+    
     func problem_F(_ n: Int, _ nums: [Int]) -> [Int] {
         var l = 0, r = nums.count - 1
         var idx = 0
