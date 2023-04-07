@@ -8,14 +8,38 @@
 import Foundation
 
 //let n = Int(readLine()!)!
-//let line = readLine()!
+//let nums = readLine()!.split(separator: " ").map({ Int($0)! })
 //
 //let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_E(n, line)
+//let result = solution.problem_F(n, nums)
+//let resultStr = result.map({ String($0) }).joined(separator: " ")
 //
-//print("\(result)")
+//print("\(result.count)")
+//print(resultStr)
 
 class AlgorithmicTraining_01_02 {
+    func problem_F(_ n: Int, _ nums: [Int]) -> [Int] {
+        var l = 0, r = nums.count - 1
+        var idx = 0
+        
+        while l < r {
+            if nums[l] != nums[r] {
+                idx = l
+                
+                if r != nums.count - 1 {
+                    l -= 1
+                    r = nums.count - 1
+                }
+            } else {
+                r -= 1
+            }
+            l += 1
+        }
+        
+        if idx == 0 { return [] }
+        else { return nums[0...idx].reversed() }
+    }
+    
     func problem_E(_ n: Int, _ line: String) -> Int {
         var distances = line.split(separator: " ").map({ Int($0)! })
         var winner = distances[0]
