@@ -2,11 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_F]: https://contest.yandex.ru/contest/27393/problems/F/
+[Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
+[Yandex_AT_01_02_F]: https://contest.yandex.ru/contest/27472/problems/F/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
-## [F. Расстановка ноутбуков][Yandex_AT_01_F]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_02_orig]
+## [F. Симметричная последовательность][Yandex_AT_01_02_F]
 
 |||
 |--------------------|----------------------------------|
@@ -16,68 +16,85 @@
 |Вывод               |стандартный вывод или output.txt  |
 |||
 
-В школе решили на один прямоугольный стол поставить два прямоугольных ноутбука. Ноутбуки нужно поставить так, чтобы их стороны были параллельны сторонам стола. Определите, какие размеры должен иметь стол, чтобы оба ноутбука на него поместились, и площадь стола была минимальна.
+Последовательность чисел назовем симметричной, если она одинаково читается как слева направо, так и справа налево. Например, следующие последовательности являются симметричными:
+
+${1 \space 2 \space  3 \space 4 \space 5 \space 4 \space 3 \space 2 \space 1}$
+
+${1 \space 2 \space 1 \space 2 \space 2 \space 1 \space 2 \space 1}$
+
+Вашей программе будет дана последовательность чисел. Требуется определить, какое минимальное количество и каких чисел надо приписать в конец этой последовательности, чтобы она стала симметричной.
 
 
 ---
 ### Формат ввода
-Вводится четыре натуральных числа, первые два задают размеры одного ноутбука, а следующие два — размеры второго. Числа не превышают 1000.
+Сначала вводится число ${N}$ — количество элементов исходной последовательности ${(1 ≤ N ≤ 100)}$. Далее идут ${N}$ чисел — элементы этой последовательности, натуральные числа от 1 до 9.
 
 
 ### Формат вывода
-Выведите два числа — размеры стола. Если возможно несколько ответов, выведите любой из них (но только один).
+Выведите сначала число ${M}$ — минимальное количество элементов, которое надо дописать к последовательности, а потом ${M}$ чисел (каждое — от 1 до 9) — числа, которые надо дописать к последовательности.
 
 
 ---
 ### Примеры
-|         |Ввод      |Вывод                              |
-|---------|----------|-----------------------------------|
-|Пример 1 |10 2 2 10 |20 2 <br> 2 20 <br> 4 10 <br> 10 4 |
-|Пример 2 |5 7 2 3   |9 5 <br> 5 9                       |
 
-
-### Примечания
-В примерах указаны ***всевозможные*** ответы на поставленную задачу. Ваша программа должна вывести один из них.
+|           |Ввод               |Вывод  |
+|-----------|-------------------|-------|
+|Пример 1   |9                  |0      |
+|           |1 2 3 4 5 4 3 2 1  |       |
+||||
+|Пример 2   |5                  |3      |
+|           |1 2 1 2 2          |1 2 1  |
+||||
+|Пример 3   |5                  |4      |   
+|           |1 2 3 4 5          |4 3 2 1|
+|||
 
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
-[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
+[AlgorithmicTraining_01_02]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_02.swift
+[AlgorithmicTraining_01_02_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_02_Tests.swift
 
-1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
-2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
+1. [AlgorithmicTraining_01_02.swift][AlgorithmicTraining_01_02]
+2. [AlgorithmicTraining_01_02_Tests.swift][AlgorithmicTraining_01_02_Tests]
 
 ```swift
 import Foundation
 
-class AlgorithmicTraining_01 {
-    func problem_F(_ line: String) -> [Int] {
-        let sizes = line.split(separator: " ").map({ Int($0)! })
-        let l1 = (min: min(sizes[0], sizes[1]), max: max(sizes[0], sizes[1]))
-        let l2 = (min: min(sizes[2], sizes[3]), max: max(sizes[2], sizes[3]))
+let n = Int(readLine()!)!
+let nums = readLine()!.split(separator: " ").map({ Int($0)! })
 
-        var result = (a: Int.max, b: Int.max, area: Int.max)
-        result.a = max(l1.max, l2.max)
-        result.b = l1.max + l2.max - result.a
+let solution = AlgorithmicTraining_01_02()
+let result = solution.problem_F(n, nums)
+let resultStr = result.map({ String($0) }).joined(separator: " ")
+
+print("\(result.count)")
+print(resultStr)
+
+
+class AlgorithmicTraining_01_02 {
+    func problem_F(_ n: Int, _ nums: [Int]) -> [Int] {
+        var l = 0, r = nums.count - 1
+        var idx = 0
         
-        if result.b <= max(l1.min, l2.min) {
-            result.a += min(min(l1.min, l2.min), result.b)
-            result.b = max(l1.min, l2.min)
-        } else {
-            result.b = l1.min + l2.min
+        while l < r {
+            if nums[l] != nums[r] {
+                idx = l
+                
+                if r != nums.count - 1 {
+                    l -= 1
+                    r = nums.count - 1
+                }
+            } else {
+                r -= 1
+            }
+            l += 1
         }
         
-        return [result.a, result.b]
+        if idx == 0 { return [] }
+        else { return nums[0...idx].reversed() }
     }
 }
-
-var line = readLine()!
-
-let solution = AlgorithmicTraining_01()
-let result = solution.problem_F(line)
-
-print("\(result[0]) \(result[1])")
 ```
 
 
