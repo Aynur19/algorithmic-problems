@@ -7,17 +7,66 @@
 
 import Foundation
 
-//let n = Int(readLine()!)!
 //let nums = readLine()!.split(separator: " ").map({ Int($0)! })
 //
 //let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_G(nums)
+//let result = solution.problem_H(nums)
 //let resultStr = result.map({ String($0) }).joined(separator: " ")
-
-//print("\(result.count)")
+//
 //print(resultStr)
 
 class AlgorithmicTraining_01_02 {
+    func problem_H(_ nums: [Int]) -> [Int] {
+        guard nums.count > 3 else { return nums }
+        var maxMin: [Int] = []
+
+        if nums.count > 5 {
+            maxMin = nums[0..<6].sorted(by: >)
+            
+            for i in 6..<nums.count {
+                if nums[i] >= maxMin[0] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = maxMin[1]
+                    maxMin[1] = maxMin[0]
+                    maxMin[0] = nums[i]
+                } else if nums[i] >= maxMin[1] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = maxMin[1]
+                    maxMin[1] = nums[i]
+                } else if nums[i] >= maxMin[2] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = nums[i]
+                } else if nums[i] > maxMin[3] {
+                    maxMin[3] = nums[i]
+                }
+                
+                if nums[i] <= maxMin[5] {
+                    maxMin[4] = maxMin[5]
+                    maxMin[5] = nums[i]
+                } else if nums[i] < maxMin[4] {
+                    maxMin[4] = nums[i]
+                }
+            }
+        } else {
+            maxMin = nums.sorted(by: >)
+        }
+        
+        var max = maxMin[0] * maxMin[1] * maxMin[2]
+        var result = [maxMin[0], maxMin[1], maxMin[2]]
+        maxMin.append(maxMin[0])
+        var tmp = 0
+        
+        for i in 1..<maxMin.count - 2 {
+            tmp = maxMin[i] * maxMin[i + 1] * maxMin[i + 2]
+            if max < tmp {
+                max = tmp
+                result = [maxMin[i], maxMin[i + 1], maxMin[i + 2]]
+            }
+        }
+        
+        return result
+    }
+    
     func problem_G(_ nums: [Int]) -> [Int] {
         var maxMax = max(nums[0], nums[1])
         var maxMin = min(nums[0], nums[1])
@@ -39,7 +88,7 @@ class AlgorithmicTraining_01_02 {
                 minMax = nums[i]
             }
         }
-        
+
         if minMin * minMax > maxMax * maxMin {
             return [minMin, minMax]
         } else {

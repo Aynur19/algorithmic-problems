@@ -31,6 +31,9 @@ extension AlgorithmicTraining_01_02_Tests {
     }
     
     func test_problem_H() throws {
+        XCTAssertEqual(task.problem_H([3, 5, 1, 7, 9, 0, 9, -3, 10]), [10, 9, 9])
+        XCTAssertEqual(task.problem_H([-5, -30000, -12]), [-5, -30000, -12])
+        XCTAssertEqual(task.problem_H([1, 2, 3]), [1, 2, 3])
     }
     
     func test_problem_G() throws {
