@@ -41,7 +41,7 @@
 5. [E. Чемпионат по метанию коровьих лепешек][Yandex_AT_01_02E]
 6. [F. Симметричная последовательность][Yandex_AT_01_02F]
 6. [G. Наибольшее произведение двух чисел][Yandex_AT_01_02G]
-6. [H. Метро][Yandex_AT_01_01H]
+6. [H. Наибольшее произведение трех чисел][Yandex_AT_01_02H]
 6. [I. Узник замка Иф][Yandex_AT_01_01I]
 6. [J. Система линейных уравнений - 2][Yandex_AT_01_01J]
 
@@ -53,7 +53,7 @@
 [Yandex_AT_01_02E]: ./descriptions/AlgorithmicTraining01_02/ProblemE.md
 [Yandex_AT_01_02F]: ./descriptions/AlgorithmicTraining01_02/ProblemF.md
 [Yandex_AT_01_02G]: ./descriptions/AlgorithmicTraining01_02/ProblemG.md
-[Yandex_AT_01_01H]: ./descriptions/AlgorithmicTraining01_01/ProblemH.md
+[Yandex_AT_01_02H]: ./descriptions/AlgorithmicTraining01_02/ProblemH.md
 [Yandex_AT_01_01I]: ./descriptions/AlgorithmicTraining01_01/ProblemI.md
 [Yandex_AT_01_01J]: ./descriptions/AlgorithmicTraining01_01/ProblemJ.md
 

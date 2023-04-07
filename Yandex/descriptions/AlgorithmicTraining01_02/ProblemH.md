@@ -2,11 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_H]: https://contest.yandex.ru/contest/27393/problems/H/
+[Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
+[Yandex_AT_01_02_H]: https://contest.yandex.ru/contest/27472/problems/H/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
-## [H. Метро][Yandex_AT_01_H]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_02_orig]
+## [H. Наибольшее произведение трех чисел][Yandex_AT_01_02_H]
 
 |||
 |--------------------|----------------------------------|
@@ -16,70 +16,97 @@
 |Вывод               |стандартный вывод или output.txt  |
 |||
 
-На некоторых кросс-платформенных станциях метро (как, например, «Третьяковская») на разные стороны платформы приходят поезда разных направлений. Таня договорилась встретиться с подругой на такой станции, но поскольку подруга приехала из другого часового пояса, то из-за джетлага сильно проспала, и Тане пришлось долго её ждать. Поезда всегда ходят точно по расписанию, и Таня знает, что поезд стоит на платформе ровно одну минуту, а интервал между поездами (время, в течение которого поезда у платформы нет) составляет ${a}$ минут для поездов на первом пути и ${b}$ минут для поездов на втором пути. То есть на первый путь приезжает поезд и стоит одну минуту, затем в течение ${a}$ минут поезда у платформы нет, затем в течение одной минуты у платформы стоит следующий поезд и т. д.
 
-Пока Таня стояла на платформе, она насчитала ${n}$ поездов на первом пути и ${m}$ поездов на втором пути. Определите минимальное и максимальное время, которое Таня могла провести на платформе, или сообщите, что она точно сбилась со счёта.
+В данном списке из ${n ≤ 10^5}$ целых чисел найдите три числа,произведение которых максимально.
 
-Все поезда, которые видела Таня, она наблюдала в течение всей минуты, то есть Таня не приходит и не уходит с платформы посередине той минуты, когда поезд стоит на платформе.
+Решение должно иметь сложность ${O(n)}$, где ${n}$ - размер списка.
 
-
----
-### Формат ввода
-Первая строка входных данных содержит число ${a}$ — интервал между поездами на первом пути. Вторая строка содержит число ${b}$ — интервал между поездами на втором пути. Третья строка содержит число ${n}$ — количество поездов на первом пути, которые увидела Таня. Четвёртая строка содержит число ${m}$ — количество поездов на втором пути, которые увидела Таня. Все числа — целые, от ${1}$ до ${1000}$.
-
-
-### Формат вывода
-Программа должна вывести два числа: минимальное и максимальное время в минутах, которое Таня могла стоять на платформе, или одно число ${-1}$, если Таня точно ошиблась.
+Выведите три искомых числа в любом порядке.
 
 
 ---
 ### Примеры
-|           |Пример 1   |Пример 2   |
-|-----------|-----------|-----------|
-|Ввод ${a}$ |1          |1          |
-|Ввод ${b}$ |3          |5          |
-|Ввод ${n}$ |3          |1          |
-|Ввод ${m}$ |2          |2          |
-|Вывод      |5 7        |-1         |
-
-
-### Примечания
-В первом примере по первому пути поезда ходят через 1 минуту. По второму — через 3. Стоя на платформе 5, 6 или 7 минут, Таня могла насчитать 3 поезда на первом пути и 2 на втором.
+|           |Ввод                   |Вывод          |
+|-----------|-----------------------|---------------|
+|Пример 1   |3 5 1 7 9 0 9 -3 10    |10 9 9         |
+||||
+|Пример 2   |-5 -30000 -12          |-5 -12 -30000  |
+||||
+|Пример 3   |1 2 3                  |1 2 3          |
+|||
 
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
-[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
+[AlgorithmicTraining_01_02]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_02.swift
+[AlgorithmicTraining_01_02_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_02_Tests.swift
 
-1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
-2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
+1. [AlgorithmicTraining_01_02.swift][AlgorithmicTraining_01_02]
+2. [AlgorithmicTraining_01_02_Tests.swift][AlgorithmicTraining_01_02_Tests]
 
 ```swift
 import Foundation
 
-class AlgorithmicTraining_01 {
-    func problem_H(_ a: Int, _ b: Int, _ n: Int, _ m: Int) -> [Int] {
-        let platform1 = (min: (1 + a) * n - a, max: (1 + a) * n + a)
-        let platform2 = (min: (1 + b) * m - b, max: (1 + b) * m + b)
+let nums = readLine()!.split(separator: " ").map({ Int($0)! })
+
+let solution = AlgorithmicTraining_01_02()
+let result = solution.problem_H(nums)
+let resultStr = result.map({ String($0) }).joined(separator: " ")
+
+print(resultStr)
+
+class AlgorithmicTraining_01_02 {
+    func problem_H(_ nums: [Int]) -> [Int] {
+        guard nums.count > 3 else { return nums }
+        var maxMin: [Int] = []
+
+        if nums.count > 5 {
+            maxMin = nums[0..<6].sorted(by: >)
+            
+            for i in 6..<nums.count {
+                if nums[i] >= maxMin[0] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = maxMin[1]
+                    maxMin[1] = maxMin[0]
+                    maxMin[0] = nums[i]
+                } else if nums[i] >= maxMin[1] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = maxMin[1]
+                    maxMin[1] = nums[i]
+                } else if nums[i] >= maxMin[2] {
+                    maxMin[3] = maxMin[2]
+                    maxMin[2] = nums[i]
+                } else if nums[i] > maxMin[3] {
+                    maxMin[3] = nums[i]
+                }
+                
+                if nums[i] <= maxMin[5] {
+                    maxMin[4] = maxMin[5]
+                    maxMin[5] = nums[i]
+                } else if nums[i] < maxMin[4] {
+                    maxMin[4] = nums[i]
+                }
+            }
+        } else {
+            maxMin = nums.sorted(by: >)
+        }
         
-        if platform1.max < platform2.min || platform1.min > platform2.max { return [-1] }
-        let minX = max(platform1.min, platform2.min)
-        let maxX = min(platform1.max, platform2.max)
+        var max = maxMin[0] * maxMin[1] * maxMin[2]
+        var result = [maxMin[0], maxMin[1], maxMin[2]]
+        maxMin.append(maxMin[0])
+        var tmp = 0
         
-        return [minX, maxX].sorted()
+        for i in 1..<maxMin.count - 2 {
+            tmp = maxMin[i] * maxMin[i + 1] * maxMin[i + 2]
+            if max < tmp {
+                max = tmp
+                result = [maxMin[i], maxMin[i + 1], maxMin[i + 2]]
+            }
+        }
+        
+        return result
     }
 }
-
-var a = Int(readLine()!)!
-var b = Int(readLine()!)!
-var n = Int(readLine()!)!
-var m = Int(readLine()!)!
-
-let solution = AlgorithmicTraining_01()
-let result = solution.problem_H(a, b, n, m)
-
-result.count == 1 ? print("\(result[0])") : print("\(result[0]) \(result[1])")
 ```
 
 
