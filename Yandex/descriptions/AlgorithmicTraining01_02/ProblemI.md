@@ -2,11 +2,11 @@
 
 [main]: ./../../../README.md
 [Yandex]: ./../../README.md
-[Yandex_AT_01_orig]: https://contest.yandex.ru/contest/27393
-[Yandex_AT_01_I]: https://contest.yandex.ru/contest/27393/problems/I/
+[Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
+[Yandex_AT_01_02_I]: https://contest.yandex.ru/contest/27472/problems/I/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_orig]
-## [I. Узник замка Иф][Yandex_AT_01_I]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_02_orig]
+## [I. Сапер][Yandex_AT_01_02_I]
 
 |||
 |--------------------|----------------------------------|
@@ -16,64 +16,120 @@
 |Вывод               |стандартный вывод или output.txt  |
 |||
 
-За многие годы заточения узник замка Иф проделал в стене прямоугольное отверстие размером ${D × E}$. Замок Иф сложен из кирпичей, размером ${A × B × C}$. Определите, сможет ли узник выбрасывать кирпичи в море через это отверстие, если стороны кирпича должны быть параллельны сторонам отверстия.
+
+Вам необходимо построить поле для игры ***"Сапер"*** по его конфигурации – размерам и координатам расставленных на нем мин.
+
+Вкратце напомним правила построения поля для игры ***"Сапер"***:
+1. Поле состоит из клеток с минами и пустых клеток
+2. Клетки с миной обозначаются символом *
+3. Пустые клетки содержат число ${k_{i,j}, \space 0≤ k_{i, j} ≤ 8}$ – количество мин на соседних клетках. 
+
+***Соседними клетками являются восемь клеток, имеющих смежный угол или сторону.***
 
 
 ---
 ### Формат ввода
-Программа получает на вход числа ${A, B, C, D, E}$.
+В первой строке содержатся три числа: 
+1. ${N, \space 1 ≤ N ≤ 100}$ - количество строк на поле; 
+2. ${M, \space 1 ≤ M ≤ 100}$ - количество столбцов на поле; 
+3. ${K, \space 0 ≤ K ≤ N ⋅ M}$ - количество мин на поле.
+
+В следующих ${K}$ строках содержатся по два числа с координатами мин: 
+1. ${p, \space 1 ≤ p ≤ N}$ - номер строки мины; 
+2. ${q, \space 1 ≤ 1 ≤ M}$ - номер столбца мины.
 
 
 ### Формат вывода
-Программа должна вывести слово ***YES*** или ***NO***.
+Выведите построенное поле, разделяя строки поля переводом строки, а столбцы - пробелом.
 
 
 ---
 ### Примеры
-|           |Пример 1   |Пример 2   |
-|-----------|-----------|-----------|
-|Ввод ${A}$ |1          |2          |
-|Ввод ${B}$ |1          |2          |
-|Ввод ${C}$ |1          |2          |
-|Ввод ${D}$ |1          |1          |
-|Ввод ${E}$ |1          |1          |
-|Вывод      |YES        |NO         |
+|           |Ввод                               |Вывод                                      |
+|-----------|-----------------------------------|-------------------------------------------|
+|Пример 1   |3 2 2<br>1 1<br>2 2                |* 2<br>2 *<br>1 1                          |
+||||
+|Пример 2   |2 2 0                              |0 0<br>0 0                                 |
+||||
+|Пример 3   |4 4 4<br>1 3<br>2 1<br>4 2<br>4 4  |1 2 * 1<br>* 2 1 1<br>2 2 2 1<br>1 * 2 *   |
+|||
 
 
 ---
 ### Решение (Swift)
-[AlgorithmicTraining_01_01]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_01.swift
-[AlgorithmicTraining_01_01_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_01_Tests.swift
+[AlgorithmicTraining_01_02]: ./../../YandexTasks.Swift/YandexTasks/Sources/YandexTasks/AlgorithmicTraining_01_02.swift
+[AlgorithmicTraining_01_02_Tests]: ./../../YandexTasks.Swift/YandexTasks/Tests/YandexTasksTests/AlgorithmicTraining_01_02_Tests.swift
 
-1. [AlgorithmicTraining_01_01.swift][AlgorithmicTraining_01_01]
-2. [AlgorithmicTraining_01_01_Tests.swift][AlgorithmicTraining_01_01_Tests]
+1. [AlgorithmicTraining_01_02.swift][AlgorithmicTraining_01_02]
+2. [AlgorithmicTraining_01_02_Tests.swift][AlgorithmicTraining_01_02_Tests]
 
 ```swift
 import Foundation
 
-class AlgorithmicTraining_01 {
-    func problem_I(_ a: Int, _ b: Int, _ c: Int, _ d: Int, _ e: Int) -> String {
-        let holeSizes = [d, e].sorted()
-        let brickSizes = [a, b, c].sorted()
-        
-        if brickSizes[0] <= holeSizes[0] && brickSizes[1] <= holeSizes[1] {
-            return "YES"
-        }
+let args1 = readLine()!.split(separator: " ").map({ Int($0)! })
+var args2: [Int] = []
 
-        return "NO"
-    }
+for i in 0..<args1[2] {
+    args2.append(contentsOf: readLine()!.split(separator: " ").map({ Int($0)! }))
 }
 
-let a = Int(readLine()!)!
-let b = Int(readLine()!)!
-let c = Int(readLine()!)!
-let d = Int(readLine()!)!
-let e = Int(readLine()!)!
+let solution = AlgorithmicTraining_01_02()
+let result = solution.problem_I(args1, args2)
 
-let solution = AlgorithmicTraining_01()
-let result = solution.problem_I(a, b, c, d, e)
+for i in 0..<result.count {
+    print(result[i])
+}
 
-print("\(result)")
+class AlgorithmicTraining_01_02 {
+    func problem_I(_ args1: [Int], _ args2: [Int]) -> [String] {
+        var result: [String] = []
+        var y = 0, x = 0, idx = 0
+        
+        guard !args2.isEmpty else {
+            for i in 0..<args1[0] {
+                idx = args1[1] * i
+                result.append(Array(repeating: "0", count: args1[1]).joined(separator: " "))
+            }
+            return result
+        }
+        
+        let n = args1[0] + 2, m = args1[1] + 2
+        var area: [Int] = Array(repeating: 0, count: n * m)
+        var idxList: [Int] = []
+        
+        for i in stride(from: 0, to: args2.count, by: 2) {
+            y = args2[i]
+            x = args2[i + 1]
+            
+            idx = (y * m) + x
+            idxList = [idx - m - 1, idx - m, idx - m + 1,
+                       idx - 1, idx + 1,
+                       idx + m - 1, idx + m, idx + m + 1]
+            
+            area[idx] = Int.min
+            for i in 0..<idxList.count { area[idxList[i]] += 1 }
+        }
+        
+        area.removeFirst(m + 1)
+        area.removeLast(m + 1)
+        for i in 1..<args1[0] {
+            area.remove(at: args1[1] * i)
+            area.remove(at: args1[1] * i)
+        }
+        
+        let str = area.map({ item in
+            if item >= 0 { return String(item) }
+            else { return "*" }
+        })
+        
+        for i in 0..<args1[0] {
+            idx = args1[1] * i
+            result.append(Array(str[idx..<(idx + args1[1])]).joined(separator: " "))
+        }
+        
+        return result
+    }
+}
 ```
 
 
