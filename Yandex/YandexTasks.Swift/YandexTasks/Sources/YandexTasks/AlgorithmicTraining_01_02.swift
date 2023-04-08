@@ -7,16 +7,6 @@
 
 import Foundation
 
-//let n = Int(readLine()!)!
-//var records: [String] = []
-//
-//for _ in 0..<n { records.append(readLine()!) }
-//
-//let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_J(n, records)
-//
-//print("\(String(format: "%.6f", result[0])) \(String(format: "%.6f", result[1]))")
-
 class AlgorithmicTraining_01_02 {
     func problem_J(_ n: Int, _ records: [String]) -> [Double] {
         var result = (min: 30.0, max: 4000.0)
