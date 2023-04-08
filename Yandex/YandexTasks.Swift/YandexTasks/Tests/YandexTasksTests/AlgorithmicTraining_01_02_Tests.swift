@@ -25,6 +25,13 @@ final class AlgorithmicTraining_01_02_Tests: XCTestCase {
 
 extension AlgorithmicTraining_01_02_Tests {
     func test_problem_J() throws {
+        XCTAssertEqual(task.problem_J(3, ["440",
+                                          "220 closer",
+                                          "300 further"]), [30.0, 260.0])
+        XCTAssertEqual(task.problem_J(4, ["554",
+                                          "880 further",
+                                          "440 closer",
+                                          "622 closer"]), [531.0, 660.0])
     }
     
     func test_problem_I() throws {

@@ -7,21 +7,50 @@
 
 import Foundation
 
-//let args1 = readLine()!.split(separator: " ").map({ Int($0)! })
-//var args2: [Int] = []
+//let n = Int(readLine()!)!
+//var records: [String] = []
 //
-//for i in 0..<args1[2] {
-//    args2.append(contentsOf: readLine()!.split(separator: " ").map({ Int($0)! }))
-//}
+//for _ in 0..<n { records.append(readLine()!) }
 //
 //let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_I(args1, args2)
+//let result = solution.problem_J(n, records)
 //
-//for i in 0..<result.count {
-//    print(result[i])
-//}
+//print("\(String(format: "%.6f", result[0])) \(String(format: "%.6f", result[1]))")
 
 class AlgorithmicTraining_01_02 {
+    func problem_J(_ n: Int, _ records: [String]) -> [Double] {
+        var result = (min: 30.0, max: 4000.0)
+        var cur = 0.0, prev = 0.0, word = "", tmp = 0.0
+        var record: [String] = []
+        cur = Double(records[0])!
+        
+        for i in 1..<records.count {
+            record = Array(records[i].split(separator: " ").map({ String($0) }))
+            prev = cur
+            cur = Double(record[0])!
+            word = record[1]
+            tmp = (prev + cur) / 2
+
+            if word == "further" {
+                if cur > prev {
+                    result.max = min(result.max, tmp)
+                }
+                else {
+                    result.min = max(result.min, tmp)
+                }
+            } else if word == "closer" {
+                if cur > prev {
+                    result.min = max(result.min, tmp)
+                }
+                else {
+                    result.max = min(result.max, tmp)
+                }
+            }
+        }
+        
+        return [result.min, result.max]
+    }
+    
     func problem_I(_ args1: [Int], _ args2: [Int]) -> [String] {
         var result: [String] = []
         var y = 0, x = 0, idx = 0
