@@ -28,6 +28,18 @@ extension AlgorithmicTraining_01_02_Tests {
     }
     
     func test_problem_I() throws {
+        XCTAssertEqual(task.problem_I([3, 2, 2], [1, 1, 2, 2]),
+                       ["* 2",
+                        "2 *",
+                        "1 1"])
+        XCTAssertEqual(task.problem_I([2, 2, 0], []),
+                       ["0 0",
+                        "0 0"])
+        XCTAssertEqual(task.problem_I([4, 4, 4], [1, 3, 2, 1, 4, 2, 4, 4]),
+                       ["1 2 * 1",
+                        "* 2 1 1",
+                        "2 2 2 1",
+                        "1 * 2 *"])
     }
     
     func test_problem_H() throws {

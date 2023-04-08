@@ -7,15 +7,70 @@
 
 import Foundation
 
-//let nums = readLine()!.split(separator: " ").map({ Int($0)! })
+//let args1 = readLine()!.split(separator: " ").map({ Int($0)! })
+//var args2: [Int] = []
+//
+//for i in 0..<args1[2] {
+//    args2.append(contentsOf: readLine()!.split(separator: " ").map({ Int($0)! }))
+//}
 //
 //let solution = AlgorithmicTraining_01_02()
-//let result = solution.problem_H(nums)
-//let resultStr = result.map({ String($0) }).joined(separator: " ")
+//let result = solution.problem_I(args1, args2)
 //
-//print(resultStr)
+//for i in 0..<result.count {
+//    print(result[i])
+//}
 
 class AlgorithmicTraining_01_02 {
+    func problem_I(_ args1: [Int], _ args2: [Int]) -> [String] {
+        var result: [String] = []
+        var y = 0, x = 0, idx = 0
+        
+        guard !args2.isEmpty else {
+            for i in 0..<args1[0] {
+                idx = args1[1] * i
+                result.append(Array(repeating: "0", count: args1[1]).joined(separator: " "))
+            }
+            return result
+        }
+        
+        let n = args1[0] + 2, m = args1[1] + 2
+        var area: [Int] = Array(repeating: 0, count: n * m)
+        var idxList: [Int] = []
+        
+        for i in stride(from: 0, to: args2.count, by: 2) {
+            y = args2[i]
+            x = args2[i + 1]
+            
+            idx = (y * m) + x
+            idxList = [idx - m - 1, idx - m, idx - m + 1,
+                       idx - 1, idx + 1,
+                       idx + m - 1, idx + m, idx + m + 1]
+            
+            area[idx] = Int.min
+            for i in 0..<idxList.count { area[idxList[i]] += 1 }
+        }
+        
+        area.removeFirst(m + 1)
+        area.removeLast(m + 1)
+        for i in 1..<args1[0] {
+            area.remove(at: args1[1] * i)
+            area.remove(at: args1[1] * i)
+        }
+        
+        let str = area.map({ item in
+            if item >= 0 { return String(item) }
+            else { return "*" }
+        })
+        
+        for i in 0..<args1[0] {
+            idx = args1[1] * i
+            result.append(Array(str[idx..<(idx + args1[1])]).joined(separator: " "))
+        }
+        
+        return result
+    }
+    
     func problem_H(_ nums: [Int]) -> [Int] {
         guard nums.count > 3 else { return nums }
         var maxMin: [Int] = []
