@@ -43,9 +43,13 @@ extension AlgorithmicTraining_01_03_Tests {
     }
     
     func test_problem_D() throws {
+        
     }
     
     func test_problem_C() throws {
+        XCTAssertEqual(task.problem_C("0 1 10 9", "1 3 0"), [[0, 1], [9, 10], [3]])
+        XCTAssertEqual(task.problem_C("1 2", "2 3"), [[0, 1], [9, 10], [3]])
+        XCTAssertEqual(task.problem_C("0 1 10 9", "1 3 0"), [[0, 1], [9, 10], [3]])
     }
     
     func test_problem_B() throws {
