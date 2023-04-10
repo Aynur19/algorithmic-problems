@@ -5,7 +5,7 @@
 [Yandex_AT_01_02_orig]: https://contest.yandex.ru/contest/27472
 [Yandex_AT_01_02_I]: https://contest.yandex.ru/contest/27472/problems/I/
 
-# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 1][Yandex_AT_01_02_orig]
+# [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 2][Yandex_AT_01_02_orig]
 ## [I. Сапер][Yandex_AT_01_02_I]
 
 |||

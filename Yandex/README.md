@@ -35,7 +35,7 @@
 6. [G. Наибольшее произведение двух чисел](./descriptions/AlgorithmicTraining01_02/ProblemG.md)
 6. [H. Наибольшее произведение трех чисел](./descriptions/AlgorithmicTraining01_02/ProblemH.md)
 6. [I. Сапер](./descriptions/AlgorithmicTraining01_02/ProblemI.md)
-6. [J. Система линейных уравнений - 2](./descriptions/AlgorithmicTraining01_01/ProblemJ.md)
+6. [J. Треугольник Максима](./descriptions/AlgorithmicTraining01_02/ProblemJ.md)
 
 
 ---
