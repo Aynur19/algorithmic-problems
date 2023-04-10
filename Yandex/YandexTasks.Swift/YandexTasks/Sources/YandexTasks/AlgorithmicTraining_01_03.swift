@@ -7,27 +7,6 @@
 
 import Foundation
 
-let nm = readLine()!.split(separator: " ").map({ Int($0)! })
-var a = Array<Int>(repeating: 0, count: nm[0])
-var b = Array<Int>(repeating: 0, count: nm[1])
-
-for i in 0..<a.count {
-    a[i] = Int(readLine()!)!
-}
-
-for i in 0..<b.count {
-    b[i] = Int(readLine()!)!
-}
-
-let solution = AlgorithmicTraining_01_03()
-let result = solution.problem_C(a, b)
-
-for i in 0..<result.count {
-    print(result[i].count)
-    print(result[i].map({ String($0)} ).joined(separator: " "))
-}
-
-
 class AlgorithmicTraining_01_03 {
     func problem_C(_ nums1: [Int], _ nums2: [Int]) -> [[Int]] {
         var result: [[Int]] = Array(repeating: [], count: 3)
