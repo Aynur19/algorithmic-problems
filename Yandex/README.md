@@ -15,10 +15,10 @@
 4. [D. Уравнение с корнем](./descriptions/AlgorithmicTraining01_01/ProblemD.md)
 5. [E. Скорая помощь](./descriptions/AlgorithmicTraining01_01/ProblemE.md)
 6. [F. Расстановка ноутбуков](./descriptions/AlgorithmicTraining01_01/ProblemF.md)
-6. [G. Детали](./descriptions/AlgorithmicTraining01_01/ProblemG.md)
-6. [H. Метро](./descriptions/AlgorithmicTraining01_01/ProblemH.md)
-6. [I. Узник замка Иф](./descriptions/AlgorithmicTraining01_01/ProblemI.md)
-6. [J. Система линейных уравнений - 2](./descriptions/AlgorithmicTraining01_01/ProblemJ.md)
+7. [G. Детали](./descriptions/AlgorithmicTraining01_01/ProblemG.md)
+8. [H. Метро](./descriptions/AlgorithmicTraining01_01/ProblemH.md)
+9. [I. Узник замка Иф](./descriptions/AlgorithmicTraining01_01/ProblemI.md)
+10. [J. Система линейных уравнений - 2](./descriptions/AlgorithmicTraining01_01/ProblemJ.md)
 
 
 ---
@@ -32,10 +32,18 @@
 4. [D. Больше своих соседей](./descriptions/AlgorithmicTraining01_02/ProblemD.md)
 5. [E. Чемпионат по метанию коровьих лепешек](./descriptions/AlgorithmicTraining01_02/ProblemE.md)
 6. [F. Симметричная последовательность](./descriptions/AlgorithmicTraining01_02/ProblemF.md)
-6. [G. Наибольшее произведение двух чисел](./descriptions/AlgorithmicTraining01_02/ProblemG.md)
-6. [H. Наибольшее произведение трех чисел](./descriptions/AlgorithmicTraining01_02/ProblemH.md)
-6. [I. Сапер](./descriptions/AlgorithmicTraining01_02/ProblemI.md)
-6. [J. Треугольник Максима](./descriptions/AlgorithmicTraining01_02/ProblemJ.md)
+7. [G. Наибольшее произведение двух чисел](./descriptions/AlgorithmicTraining01_02/ProblemG.md)
+8. [H. Наибольшее произведение трех чисел](./descriptions/AlgorithmicTraining01_02/ProblemH.md)
+9. [I. Сапер](./descriptions/AlgorithmicTraining01_02/ProblemI.md)
+10. [J. Треугольник Максима](./descriptions/AlgorithmicTraining01_02/ProblemJ.md)
+
+
+---
+## [Яндекс. Тренировки по алгоритмам июнь 2021, занятие 3][Yandex_AT_01_03_orig] 
+[Yandex_AT_01_03_orig]: https://contest.yandex.ru/contest/27663/
+
+Решения задач:
+1. [A. Количество различных чисел](./descriptions/AlgorithmicTraining01_03/ProblemA.md) 
 
 
 ---
@@ -45,9 +53,9 @@
 Решения задач:
 1. [А. Забавный конфуз](./descriptions/AlgorithmicTraining02A/ProblemA.md)
 2. [B. Изобретательный Петя](./descriptions/AlgorithmicTraining02A/ProblemB.md)
-2. [C. Шахматная доска](./descriptions/AlgorithmicTraining02A/ProblemC.md)
-2. [D. Петя, Маша и верёвочки](./descriptions/AlgorithmicTraining02A/ProblemD.md)
-2. [E. Газон](/descriptions/AlgorithmicTraining02A/ProblemE.md)
+3. [C. Шахматная доска](./descriptions/AlgorithmicTraining02A/ProblemC.md)
+4. [D. Петя, Маша и верёвочки](./descriptions/AlgorithmicTraining02A/ProblemD.md)
+5. [E. Газон](/descriptions/AlgorithmicTraining02A/ProblemE.md)
 
 
 ---
