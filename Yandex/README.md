@@ -44,6 +44,7 @@
 
 Решения задач:
 1. [A. Количество различных чисел](./descriptions/AlgorithmicTraining01_03/ProblemA.md) 
+2. [B. Пересечение множеств](./descriptions/AlgorithmicTraining01_03/ProblemB.md) 
 
 
 ---
