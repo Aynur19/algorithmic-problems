@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodeforcesProblems.DLL", "C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodeforcesProblems.Test", "CodeforcesProblems.Test\CodeforcesProblems.Test.vcxproj", "{6F913668-8F85-4F28-8114-96A8A60FFFD4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodeforcesProblems.ConsoleApp", "CodeforcesProblems.ConsoleApp\CodeforcesProblems.ConsoleApp.vcxproj", "{491ED011-4A8E-44E0-A517-87563D42201C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{6F913668-8F85-4F28-8114-96A8A60FFFD4}.Release|x64.Build.0 = Release|x64
 		{6F913668-8F85-4F28-8114-96A8A60FFFD4}.Release|x86.ActiveCfg = Release|Win32
 		{6F913668-8F85-4F28-8114-96A8A60FFFD4}.Release|x86.Build.0 = Release|Win32
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Debug|x64.ActiveCfg = Debug|x64
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Debug|x64.Build.0 = Debug|x64
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Debug|x86.ActiveCfg = Debug|Win32
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Debug|x86.Build.0 = Debug|Win32
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Release|x64.ActiveCfg = Release|x64
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Release|x64.Build.0 = Release|x64
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Release|x86.ActiveCfg = Release|Win32
+		{491ED011-4A8E-44E0-A517-87563D42201C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

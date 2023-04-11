@@ -11,11 +11,16 @@ namespace CodeforcesProblemsTest
 	{
 	public:
 		
-		TEST_METHOD(Problems_20)
+		TEST_METHOD(Test_Problem_4A)
 		{
-			std::string expected("YES");
+			Assert::AreEqual(std::string("YES"), Problem_4A("8"));
+			Assert::AreEqual(std::string("NO"), Problem_4A("5"));
+		}
 
-			Assert::AreEqual(expected, Problem_4A("8"));
+		TEST_METHOD(Test_Problems_1A)
+		{
+			Assert::AreEqual(4LL, Problem_1A("6 6 4"));
+			Assert::AreEqual(1000000000000000000LL, Problem_1A("1000000000 1000000000 1"));
 		}
 	};
 }
