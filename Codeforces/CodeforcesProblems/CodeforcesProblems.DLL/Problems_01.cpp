@@ -1,10 +1,9 @@
 #include "pch.h"
 
 #include "Problems_01.h"
-#include <vector>
 
 
-vector<int> parseNumbers(string input, string delimiter = " ") {
+vector<int> parseNumbers(string input, string const &delimiter = " ") {
     vector<int> result;
     int number = 0;
 
@@ -21,7 +20,7 @@ vector<int> parseNumbers(string input, string delimiter = " ") {
     return result;
 }
 
-string Problem_4A(string input) {
+string Problem_4A(const string &input) {
     string result;
 
     try
@@ -49,12 +48,69 @@ string Problem_4A(string input) {
     return result;
 }
 
-long long Problem_1A(string input) {
-    long long result = 0;
+void Problem_1B(vector<string> &data) {
+    const string digits = "0123456789";
+    const string symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    size_t countS = symbols.size();
+    size_t posC = string::npos;
+    size_t posN = string::npos;
+    bool isRC = false;
+
+    for (size_t i = 0; i < data.size(); i++)
+    {
+        posN = data[i].find_first_of(digits, 1);
+        posC = data[i].find('C');
+        
+        isRC = (posN == 0) || ((posC != string::npos) && (posC > posN));
+
+        int row = 0;
+        int column = 0;
+
+        if (isRC) {
+            row = stoi(data[i].substr(posN, posC - 1));
+            column = stoi(data[i].substr(posC + 1));
+
+            string columnStr = "";
+            int n = (column % countS) - 1;
+            auto lastColumn = symbols[n];
+            column -= n;
+            vector<int> indexces = {};
+
+            if (column > 0) {
+                do {
+                    column /= countS;
+                    
+                    if (column > countS) {
+                        columnStr += "A";
+                    }
+                    else {
+                        columnStr = columnStr + symbols[column - 1];
+                    }
+                } while (column > countS);
+            }
+            columnStr += lastColumn;
+
+            data[i] = columnStr + to_string(row);
+
+        }
+        else {
+            for (int64_t j = posN - 1, k = 0; j >= 0; j--, k++)
+            {
+                column += (int)((1 + (int)symbols.find(data[i][j])) * pow(symbols.size(), k));
+            }
+            row = stoi(data[i].substr(posN));
+
+            data[i] = "R" + to_string(row) + "C" + to_string(column);
+        }
+    }
+}
+
+int64_t Problem_1A(const string &input) {
+    int64_t result = 0;
     vector<int> args = parseNumbers(input);
 
-    result = args[0] / args[2] + (args[0] % args[2] == 0 ? 0 : 1);
-    result *= args[1] / args[2] + (args[1] % args[2] == 0 ? 0 : 1);
+    result = args[0] / args[2] + (int64_t)(args[0] % args[2] == 0 ? 0 : 1);
+    result *= args[1] / args[2] + (int64_t)(args[1] % args[2] == 0 ? 0 : 1);
 
     return result;
 }

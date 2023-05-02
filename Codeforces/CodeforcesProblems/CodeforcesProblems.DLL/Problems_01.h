@@ -17,8 +17,8 @@
 using namespace std;
 
 
-extern PROBLEMS string Problem_4A(string input);
+extern PROBLEMS string Problem_4A(const string &input);
 
-extern PROBLEMS vector<string> Problem_1B(vector<string> inputs);
+extern PROBLEMS void Problem_1B(vector<string> &data);
 
-extern PROBLEMS long long Problem_1A(string input);
+extern PROBLEMS int64_t Problem_1A(const string &input);

@@ -13,8 +13,21 @@ namespace CodeforcesProblemsTest
 		
 		TEST_METHOD(Test_Problem_4A)
 		{
-			Assert::AreEqual(std::string("YES"), Problem_4A("8"));
-			Assert::AreEqual(std::string("NO"), Problem_4A("5"));
+			Assert::AreEqual(string("YES"), Problem_4A("8"));
+			Assert::AreEqual(string("NO"), Problem_4A("5"));
+		}
+
+		TEST_METHOD(Test_Problems_1B)
+		{
+			vector<string> data = { "R23C55", "BC23" };
+			vector<string> expected = { "BC23", "R23C55" };
+
+			Problem_1B(data);
+
+			for (size_t i = 0; i < data.size(); i++)
+			{
+				Assert::AreEqual(expected[i], data[i]);
+			}
 		}
 
 		TEST_METHOD(Test_Problems_1A)
