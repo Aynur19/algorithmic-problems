@@ -2,13 +2,13 @@
 //
 
 #include <iostream>
-#include "../CodeforcesProblems.DLL/Problems_20.h"
+#include "../CodeforcesProblems.DLL/Problems_01.h"
 
 int main()
 {
-    std::string input;
-    std::getline(std::cin, input);
+    string input;
+    getline(std::cin, input);
 
-    std::cout << Problem_1A(input) << std::endl;
+    cout << Problem_1A(input) << endl;
 }
 

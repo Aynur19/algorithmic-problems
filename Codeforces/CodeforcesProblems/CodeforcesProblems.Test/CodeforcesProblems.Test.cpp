@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-#include "../CodeforcesProblems.DLL/Problems_20.h"
+#include "../CodeforcesProblems.DLL/Problems_01.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

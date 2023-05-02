@@ -12,11 +12,13 @@
 
 #include <iostream>
 #include <string>
-
+#include <vector>
 
 using namespace std;
 
 
-extern PROBLEMS std::string Problem_4A(std::string input);
+extern PROBLEMS string Problem_4A(string input);
 
-extern PROBLEMS long long Problem_1A(std::string input);
+extern PROBLEMS vector<string> Problem_1B(vector<string> inputs);
+
+extern PROBLEMS long long Problem_1A(string input);
