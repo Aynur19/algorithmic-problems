@@ -63,35 +63,52 @@ void Problem_1B(vector<string> &data) {
         
         isRC = (posN == 0) || ((posC != string::npos) && (posC > posN));
 
-        int row = 0;
-        int column = 0;
+        int64_t row = 0;
+        int64_t column = 0;
 
         if (isRC) {
             row = stoi(data[i].substr(posN, posC - 1));
             column = stoi(data[i].substr(posC + 1));
 
             string columnStr = "";
-            int n = (column % countS) - 1;
-            auto lastColumn = symbols[n];
+            string lastColumn = "";
+
+            int n = (column % countS);
+            if (n > 0) {
+                lastColumn = lastColumn + symbols[n - 1];
+            }
+
             column -= n;
-            vector<int> indexces = {};
 
             if (column > 0) {
                 do {
+                    n = column % countS;
                     column /= countS;
                     
                     if (column > countS) {
                         columnStr += "A";
                     }
+                    else if (n > 0) {
+                        if (column > 0 && lastColumn.empty()) {
+                            columnStr = columnStr + symbols[n - 2] + symbols[countS - 1];
+                        }
+                        else {
+                            columnStr = columnStr + symbols[n - 1];
+                        }
+                    }
                     else {
-                        columnStr = columnStr + symbols[column - 1];
+                        if (lastColumn.empty()) {
+                            columnStr = columnStr + symbols[column - 2] + symbols[countS - 1];
+                        }
+                        else {
+                            columnStr = columnStr + symbols[column - 1];
+                        }
                     }
                 } while (column > countS);
             }
             columnStr += lastColumn;
 
             data[i] = columnStr + to_string(row);
-
         }
         else {
             for (int64_t j = posN - 1, k = 0; j >= 0; j--, k++)
