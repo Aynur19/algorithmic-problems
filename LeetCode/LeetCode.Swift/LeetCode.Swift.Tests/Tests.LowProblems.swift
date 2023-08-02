@@ -17,7 +17,7 @@ final class TestsLowProblems: XCTestCase {
         ([3, 3], 6, [0, 1])
     ]
     
-    func tests_problem001_testsTwoSum() throws {
+    func tests_problem001_twoSum() throws {
         for data in tests_problem001_twoSumData {
             XCTAssertEqual(twoSum(data.0, data.1), data.2, "\(data)")
         }

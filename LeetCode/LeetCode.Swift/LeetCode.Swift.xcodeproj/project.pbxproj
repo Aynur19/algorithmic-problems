@@ -11,6 +11,11 @@
 		9852E5B72A732A3D00E49335 /* Problem.001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5B62A732A3D00E49335 /* Problem.001.swift */; };
 		9852E5BF2A732C6900E49335 /* Tests.LowProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5BE2A732C6900E49335 /* Tests.LowProblems.swift */; };
 		9852E5C32A732C7E00E49335 /* Problem.001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5B62A732A3D00E49335 /* Problem.001.swift */; };
+		9852E5C72A73DE7300E49335 /* Problem.002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5C62A73DE7300E49335 /* Problem.002.swift */; };
+		9852E5CA2A741D0800E49335 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5C92A741D0800E49335 /* ListNode.swift */; };
+		9852E5CB2A741D0F00E49335 /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5C92A741D0800E49335 /* ListNode.swift */; };
+		9852E5CD2A74690C00E49335 /* Tests.MediumProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5CC2A74690C00E49335 /* Tests.MediumProblems.swift */; };
+		9852E5CE2A746BC500E49335 /* Problem.002.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852E5C62A73DE7300E49335 /* Problem.002.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +36,9 @@
 		9852E5B62A732A3D00E49335 /* Problem.001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.001.swift; sourceTree = "<group>"; };
 		9852E5BC2A732C6900E49335 /* LeetCode.Swift.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetCode.Swift.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9852E5BE2A732C6900E49335 /* Tests.LowProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.LowProblems.swift; sourceTree = "<group>"; };
+		9852E5C62A73DE7300E49335 /* Problem.002.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.002.swift; sourceTree = "<group>"; };
+		9852E5C92A741D0800E49335 /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		9852E5CC2A74690C00E49335 /* Tests.MediumProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.MediumProblems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,9 @@
 		9852E5AD2A731CA500E49335 /* LeetCode.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				9852E5C82A741C5800E49335 /* Structs */,
 				9852E5B52A731F4A00E49335 /* Low Problems */,
+				9852E5C52A73DE5100E49335 /* Medium Problems */,
 				9852E5AE2A731CA500E49335 /* main.swift */,
 			);
 			path = LeetCode.Swift;
@@ -90,8 +100,25 @@
 			isa = PBXGroup;
 			children = (
 				9852E5BE2A732C6900E49335 /* Tests.LowProblems.swift */,
+				9852E5CC2A74690C00E49335 /* Tests.MediumProblems.swift */,
 			);
 			path = LeetCode.Swift.Tests;
+			sourceTree = "<group>";
+		};
+		9852E5C52A73DE5100E49335 /* Medium Problems */ = {
+			isa = PBXGroup;
+			children = (
+				9852E5C62A73DE7300E49335 /* Problem.002.swift */,
+			);
+			path = "Medium Problems";
+			sourceTree = "<group>";
+		};
+		9852E5C82A741C5800E49335 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				9852E5C92A741D0800E49335 /* ListNode.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,8 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9852E5C72A73DE7300E49335 /* Problem.002.swift in Sources */,
 				9852E5B72A732A3D00E49335 /* Problem.001.swift in Sources */,
 				9852E5AF2A731CA500E49335 /* main.swift in Sources */,
+				9852E5CA2A741D0800E49335 /* ListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9852E5CE2A746BC500E49335 /* Problem.002.swift in Sources */,
 				9852E5BF2A732C6900E49335 /* Tests.LowProblems.swift in Sources */,
 				9852E5C32A732C7E00E49335 /* Problem.001.swift in Sources */,
+				9852E5CD2A74690C00E49335 /* Tests.MediumProblems.swift in Sources */,
+				9852E5CB2A741D0F00E49335 /* ListNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
