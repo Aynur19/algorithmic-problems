@@ -9,6 +9,27 @@ import XCTest
 @testable import LeetCode_Swift
 
 final class TestsLeetCode75: XCTestCase {
+    // MARK: Problem 605: Can Place Flowers
+    lazy var testsData_problem_605: [(flowerbed: [Int], n: Int, result: Bool)] = {
+        var testsData = [(flowerbed: [Int], n: Int, result: Bool)]()
+        
+        testsData.append((flowerbed: [0, 0, 0], n: 2, result: true))
+        testsData.append((flowerbed: [0, 1, 0], n: 1, result: false))
+        testsData.append((flowerbed: [1, 0, 0, 0, 1], n: 1, result: true))
+        testsData.append((flowerbed: [1, 0, 0, 0, 1], n: 2, result: false))
+        testsData.append((flowerbed: [0, 0, 1, 0, 1], n: 1, result: true))
+        testsData.append((flowerbed: [0], n: 1, result: true))
+        
+        return testsData
+    }()
+    
+    func tests_problem_605_canPlaceFlowers() throws {
+        for data in testsData_problem_605 {
+            XCTAssertEqual(problem_605_canPlaceFlowers(data.flowerbed, data.n), data.result,
+                           "flowerbed: \(data.flowerbed), n: \(data.n)")
+        }
+    }
+    
     
     // MARK: Problem 1431: Kids With the Greatest Number of Candies
     lazy var testsData_problem_1431: [(candies: [Int], extraCandies: Int, result: [Bool])] = {
