@@ -9,6 +9,25 @@ import XCTest
 @testable import LeetCode_Swift
 
 final class TestsLeetCode75: XCTestCase {
+    // MARK: Problem 345: Reverse Vowels of a String
+    lazy var testsData_problem_345: [(s: String, result: String)] = {
+        var testsData = [(s: String, result: String)]()
+        
+        testsData.append((s: "hello", result: "holle"))
+        testsData.append((s: "leetcode", result: "leotcede"))
+        testsData.append((s: "aA", result: "Aa"))
+        
+        return testsData
+    }()
+    
+    func tests_problem_345_reverseVowels() throws {
+        for data in testsData_problem_345 {
+            XCTAssertEqual(problem_345_reverseVowels(data.s), data.result,
+                           "s: \(data.s), result: \(data.result)")
+        }
+    }
+    
+    
     // MARK: Problem 605: Can Place Flowers
     lazy var testsData_problem_605: [(flowerbed: [Int], n: Int, result: Bool)] = {
         var testsData = [(flowerbed: [Int], n: Int, result: Bool)]()
